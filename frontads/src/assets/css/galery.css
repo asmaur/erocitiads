@@ -1,0 +1,84 @@
+
+
+.wiz-card{
+    position: relative;
+    height: 20rem;
+    width: 100%;
+    margin-top: .5rem;
+    display: block;
+   
+}
+
+.wiz-header{
+    min-height: 70px;
+    background-color: rgba(255, 255, 255, .1);
+    z-index: 3;
+    width: 100%;
+}
+.wiz-header{
+    position: absolute;
+    top: 2px;
+}
+
+
+.wiz-card img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+
+.wiz-vip{
+    z-index: 900;
+    position: absolute; 
+    top: 10px; 
+    right: 16px;
+}
+.wiz-vip .btn-danger{
+    background-color: #ED3146;
+    border: 0;
+    font-weight: 500;
+    
+}
+
+.thumb {
+            height: 80px;
+            width: 100px;
+            border: 1px solid #000;
+        }
+
+        ul.thumb-Images li {
+            width: 120px;
+            float: left;
+            display: inline-block;
+            vertical-align: top;
+            height: 120px;
+        }
+
+        .img-wrap {
+            position: relative;
+            display: inline-block;
+            font-size: 0;
+        }
+
+            .img-wrap .close {
+                position: absolute;
+                top: 2px;
+                right: 2px;
+                z-index: 100;
+                background-color: #D0E5F5;
+                padding: 5px 2px 2px;
+                color: #000;
+                font-weight: bolder;
+                cursor: pointer;
+                opacity: .5;
+                font-size: 23px;
+                line-height: 10px;
+                border-radius: 50%;
+            }
+
+            .img-wrap:hover .close {
+                opacity: 1;
+                background-color: #ED3146;
+                color: #fff;
+            }

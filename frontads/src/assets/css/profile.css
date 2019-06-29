@@ -1,0 +1,132 @@
+
+
+/* color 
+
+black = #111111
+blue  = #19B6EE
+green = #3EB34F
+red =   #ED3146
+orange = #E95420
+
+diseabled = #CDCDCD
+
+ end color */
+
+#nav-tab .nav-link{
+    background-color: #000 !important;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+#nav-tab .nav-link.active{
+    background-color: #CDCDCD !important;
+    color: #000;
+}
+#dash .card{
+    margin-top: .3rem;
+}
+#preview{
+    background-color: #3EB34F;
+    text-transform: uppercase;
+}
+
+#deletar{
+    background-color: #ED3146;
+    text-transform: uppercase;
+}
+
+.card-header{
+    text-align: center;
+    font-family: 'Raleway';
+    font-weight: 500;
+    background-color: #cdcdcd
+    
+}
+.card-header h3{
+    text-transform: uppercase;
+}
+
+.card .price{
+    color: #000;
+}
+.price .plan-amount{
+    font-size: 2rem;
+}
+.price .devise-symbol{
+    position: relative;
+    font-size: .8rem;
+    padding-top: 1rem;
+}
+
+
+.ativar{
+    background-color: #19B6EE;
+    border-color: #fff;
+    color: #fff;
+    text-transform: uppercase;
+}
+.pendente{
+    background-color: rgba(255, 165,20);
+    border-color: #fff;
+    color: #fff;
+    text-transform: uppercase;
+}
+.card-footer .disabled{
+    background-color: #000;
+    border-color: #fff;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.ativar:hover{
+    background-color: #fff;
+    color: #000 !important;
+    border-color: #000;
+}
+.card-footer a.disabled{
+    background-color: green !important;
+}
+
+.card-list ul{
+    list-style: none;
+    
+}
+.card-list ul li {
+    color: #6a6a6a;
+    font-size: 16px;
+    line-height: normal;
+    margin-bottom: 2px;
+    padding-bottom: 2px;
+    padding-left: 30px;
+    position: relative;
+    font-weight: 400;
+}
+.card-list ul li::before {
+    color: rgb(255, 255, 255);
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    height: 20px;
+    left: 0px;
+    position: absolute;
+    text-align: center;
+    top: 5%;
+    width: 20px;
+    line-height: 20px;
+    background: none 0px 0px repeat scroll #19B6EE;
+    border-radius: 50%;
+    font-weight: 900;
+}
+
+
+.card-brand{
+    //height: 6px;
+    //width: 60px;
+    
+    
+}
+.card-brand img{
+    height: 80px;
+    width: 80px;
+    //object-fit: cover;
+}
