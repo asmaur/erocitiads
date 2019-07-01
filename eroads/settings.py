@@ -41,10 +41,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+LOCAL_APPS = ['apps.launch']
 
 THIRD_PARTY_APPS = [ 'corsheaders', 'webpack_loader',]
 
-INSTALLED_APPS = INSTALLED_APPS + THIRD_PARTY_APPS
+INSTALLED_APPS = INSTALLED_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 
 MIDDLEWARE = [
