@@ -50,8 +50,8 @@ var csrftoken = getCookie('csrftoken');
                 xhr.setRequestHeader("X-CSRFToken", csrftoken);           
               },              
            
-              success: function(data, status, xhttp){
-                //console.log(data);
+              success: function(data){
+                console.log(data);
                 $.notify(data.message, "success");
                 
               },

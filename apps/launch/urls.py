@@ -5,6 +5,6 @@ from .views import *
 
 urlpatterns = [
     re_path("^$", index),
-    re_path("^newsletter/$", newsletter )
+    re_path("^newsletter/$", newsletter)
 ]
 

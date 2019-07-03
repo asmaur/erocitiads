@@ -28,3 +28,10 @@ def newsletter(request):
     response = {"message":"Algo deu errado. Tente mais tarde"}
     print(response)
     return HttpResponse(status=400, content_type='application/json', content=json.dumps(response))
+
+
+def error_404_view(request, exception):
+    return render(request,'launch/error.html', {}, status=404)
+
+def error_403_view(request, exception):
+    return render(request,'launch/error.html', {}, status=403)

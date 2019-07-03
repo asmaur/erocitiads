@@ -22,3 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #path("", TemplateView.as_view(template_name="application.html"), name="app",),
 ]
+
+handler404 = 'apps.launch.views.error_404_view'
+handler403 = 'apps.launch.views.error_403_view'
