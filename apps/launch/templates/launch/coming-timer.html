@@ -1,48 +1,18 @@
-{% load staticfiles %}
-<!DOCTYPE html>
-<html lang="">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta property='og:title' content='title' />
-    <meta property='og:image' content='image/path' />
-    <meta property='og:description' content='description' />
-    <meta property='og:url' content='your url' />
-    <meta property="og:locale" content="en" />
+{% extends "launch/base.html" %}
 
 
-    <title>EroCiti ads :: Assessoria e Marketing Pessoal</title>
-
-    <link rel="stylesheet" href="{% static "vendor/css/bootstrap.min.css" %}">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="{% static "css/style.css" %}">
-    <link rel="stylesheet" href="{% static "css/coming.css" %}">
-</head>
-
-<body data-spy="scroll" data-offset="200">
-    
-
-
-    <nav class="navbar navbar-expand-lg  fixed-top nav-two">
-        <a class="navbar-brand" href="/">
-            <!-- <img class="mb-3 img-fluid" src="img/Logo.png" alt="logo-image"> -->
-            EroCiti ads</a>
-      
-    </nav>
-
+{% block content %}
 
     <div id="main" class="d-flex align-items-center justify-content-center">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-8 offset-md-2 text-center">
-                    <h3 class="m-title">Simples, Eficace e Global</h3>
-                    <p>Seu anuncio para o Brasil todo.</p>
+                    <h6 class="m-title">Juntos, Construimos seu Sucesso</h6>
+                        <h2 style="margin: -.4rem;">EroCiti</h2>
+                    <p>A maior plataforma de scort girls do Brasil.</p>
 
                     <div class="card text-center" id="notif">
-                        <h6 class="card-header">Faça parte dos primeiros.</h6>
+                        <h6 class="card-header">Junte-se a nós.</h6>
                         <div class="card-body">
 
                             <form id="newsForm">
@@ -84,30 +54,28 @@
 
         </div>
 
-        <div id="seta" class="text-center">
-            <a href="#about" class="page-scroll"><i class="fas fa-angle-down"></i></a>
-        </div>
-
     </div>
 
     <div id="about">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-8 offset-md-2 text-center">
-                    <h4 id="who">Sobre Nos</h4>
+                    <h4 id="who" style="font-weight: 600;">Sobre Nós</h4>
 
-                    <h5>
-                        Assessoria de marketing Pessoal
-                    </h5>
+
                 </div>
 
-                <div class="col-sm-12 col-md-8 offset-md-2 text-center">
+                <div class="col-sm-12 col-md-8 offset-md-2 text-center" style="font-size: 1.5rem;">
 
                     <p style="padding: 2rem;">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                        Somos um site de maketing e publicidade que vai ajudar você a alavancar seu negócio. <br>
+
+                        EroCiti é uma plataforma completa, ideal para quem trabalha no mercado do entretenimento adulto.
+                        <br>
+
                     </p>
                     <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                        Mude a forma de se relacionar com seus clientes.
                     </p>
 
                 </div>
@@ -116,88 +84,5 @@
     </div>
 
    
+{% endblock %}
 
-    <div id="contact" class="justify-content-center align-items-center">
-
-        <div class="container">
-            <div class="row">
-
-
-                <div class="col-md-12 mt-4 text-center">
-
-                    <h3 class=" wow fadeInUp animated animated" style="margin-bottom: .4rem;">Nossos contatos</h3>
-
-                </div>
-
-                <div class="col-md-4 offset-md-4 text-center" style="">
-                    <a href="">
-                        <i class="fab fa-whatsapp fa-3x"></i>
-                    </a>
-                    <a href="">
-                        <i class="fab fa-twitter fa-3x"></i>
-                    </a>
-                    <a href="">
-                        <i class="fab fa-instagram fa-3x"></i>
-                    </a>
-                </div>
-
-
-            </div>
-        </div>
-
-    </div>
-
-    <div id="footer">
-        <div class="container">
-            <ul class="footer-navbar">
-                <!-- <li><a href="#">Home </a></li>
-                <li><a href="#">About </a></li>
-                <li><a href="#">Services </a></li> -->
-                <!-- <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms &amp; Conditions</a></li> -->
-            </ul>
-            <div class="copy-text">
-                EroCiti &copy; <script type="text/javascript">
-                    document.write(new Date().getFullYear());
-                </script> | Todos os direitos reservados. </div>
-        </div>
-    </div>
-
-
-
-
-
-    <!-- scroll control -->
-    <div id="topcontrol" class="topcontrol" title=""><i class="fa fa-arrow-up scrolltop"></i></div>
-
-    <!-- End scroll control -->
-
-
-    <script src="{% static "js/jquery-3.3.1.min.js" %}"></script>
-
-    <script src="{% static "js/notify.min.js" %}"></script>
-    <script src="{% static "js/countdown.min.js" %}"></script>
-    <script src="{% static "js/popper.min.js" %}"></script>
-    <script src="{% static "vendor/js/bootstrap.min.js" %}"></script>
-    
-    <script src="{% static "js/script.js" %}"></script>
-    <script src="{% static "js/scrolltopcontrol.js" %}"></script>
-
-    
-    <script src="{% static "js/newsletter.js" %}"></script>
-    
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143162065-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-143162065-1');
-</script>
-
-
-
-</body>
-
-</html>
