@@ -156,7 +156,7 @@
 </template>
 
 <script>
-    import axigen from '../genapi.js';
+    import ax from '../api.js';
     import axios from 'axios'
 
     export default {
@@ -230,7 +230,7 @@
                         formData.append('file', this.file)
                         formData.append('datus', JSON.stringify(this.datus))
 
-                        axigen.post("pf/", formData)
+                        ax.post("pf/", formData)
                             .then(response => {
                                 this.$noty.success(response.data.message);
                                 setTimeout(() => {

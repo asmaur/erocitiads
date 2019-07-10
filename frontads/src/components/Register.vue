@@ -122,7 +122,7 @@
 </template>
 
 <script>
-    import ax from '../genapi.js';
+    import axigen from '../genapi.js';
     import axios from 'axios'
 
     export default {
@@ -175,17 +175,18 @@
                     //console.log(valid)
 
                     if (valid) {
-                        ax.post("/log/", this.datus)
+                        axigen.post("/log/", this.datus)
                             .then(response => {
                                 this.$noty.success(response.data.message)
+                                $('#registerModal').modal('hide')
                                 setTimeout(() => {
                                     this.$router.push("/")
-                                }, 1000);
+                                }, 100);
                             })
                             .catch(error => {
                                 setTimeout(() => {
                                     this.$noty.error(error.response.data.message)
-                                }, 500);
+                                }, 100);
 
                             })
                     } else {

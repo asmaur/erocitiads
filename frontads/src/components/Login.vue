@@ -81,10 +81,11 @@
                             localStorage.setItem('user', JSON.stringify(user))
                             //localStorage.setItem('user', JSON.stringify(response.data.agente.user)),
                             this.$noty.success(response.data.message)
+                            $('#loginModal').modal('hide')
                             setTimeout(() => {
                                 this.$router.push("/dash/" + agente.id + "/")
-                                //window.location.reload()
-                            }, 5000);
+                                
+                            }, 2000);
 
                         })
                         .catch(error => {
