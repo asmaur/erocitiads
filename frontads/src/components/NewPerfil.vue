@@ -191,6 +191,7 @@
                 tipo: null,    
                 file: "",
                 datus: {},
+                agente: {},
             };
         },
 
@@ -224,7 +225,7 @@
 
                     if (valid) {
 
-                        this.datus.pk = this.pk
+                        this.datus.pk = this.agente.id
                         this.datus.phone = this.fone
                         var formData = new FormData()
                         formData.append('file', this.file)
@@ -255,6 +256,7 @@
 
         created() {
             this.getStates();
+            this.agente = JSON.parse(localStorage.getItem("agente"));
         },
 
         watch: {
