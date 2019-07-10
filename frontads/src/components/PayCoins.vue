@@ -79,7 +79,7 @@
                     senderName: this.user.first_name + ' ' + this.user.last_name, //Jose Comprador
                     senderAreaCode: this.agente.code_area,
                     senderPhone: this.agente.phone, //999999999
-                    senderEmail: "agente@sandbox.pagseguro.com.br", //this.user.email, //comprador@uol.com.br 
+                    senderEmail: this.user.email, //comprador@uol.com.br 
                     senderCpf: this.agente.cpf,
                     shippingAddressRequired: false,
 
