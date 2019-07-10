@@ -36,8 +36,8 @@
                             <div class="form-row">
                                 <div class="form-group col-md-12">
                                     <label for="username" class="col-form-label">Nome de usuário:</label>
-                                    <input type="text" class="form-control" id="username" name="username" maxlength="7" v-validate="{ alpha: true, max: 7 }" v-model="username" pattern="[a-z]{1,7}" title="Deve conter somente letras minusculas e no maximo 7 letras" placeholder="Entre um nome de usuário (no maximo 7 letras minusculas)" disabled>
-                                    <span class="alert-danger">{{ errors.first('username') }}</span>
+                                    <input type="text" class="form-control" id="username" name="username" maxlength="7" v-validate="{ alpha_num: true, max: 7 }" v-model="username" pattern="[a-z]{1,7}" title="Deve conter somente letras minusculas e no maximo 7 letras" placeholder="Entre um nome de usuário (no maximo 7 letras minusculas)" disabled>
+                                    <span class="alert-danger" v-for="error in errors.collect('username')" :key="error.index">{{ error }}</span>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="nome" class="col-form-label">Nome</label>
@@ -55,7 +55,7 @@
                                 <div class="form-group col-md-6">
                                     <label for="email">Email</label>
                                     <input type="email" class="form-control" id="email" v-model="email" v-validate="'required|email'" name="email" ref="email" placeholder="Entre seu email"> <!-- regrex="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"  required> -->
-                                    <span class="alert-danger">{{ errors.first('email') }}</span>
+                                    <span class="alert-danger" v-for="error in errors.collect('email')" :key="error.index">{{ error }}</span>
 
                                 </div>
 

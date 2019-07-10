@@ -21,8 +21,8 @@
 
                                 <div class="form-group col-md-12">
                                     <label for="username" class="col-form-label">Nome de usuário:</label>
-                                    <input type="text" class="form-control" id="username" name="username" maxlength="7" v-validate="{ alpha: true, max: 7 }" v-model="username" pattern="[a-z]{1,7}" title="Deve conter somente letras minusculas e no maximo 7 letras" placeholder="Entre um nome de usuário (no maximo 7 letras minusculas)" required>
-                                    <span class="alert-danger">{{ errors.first('username') }}</span>
+                                    <input type="text" class="form-control" id="username" name="username" maxlength="7" v-validate="{ alpha: true, max: 7, required:true }" v-model="username" title="Deve conter somente letras minusculas e no maximo 7 letras" placeholder="Entre um nome de usuário (no maximo 7 letras minusculas)" required>
+                                    <span class="alert-danger" v-for="error in errors.collect('username')" :key="error.index">{{ error }}</span>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="nome" class="col-form-label">Nome</label>
@@ -39,23 +39,25 @@
                                 <div class="form-group col-md-6">
                                     <label for="email">Email</label>
                                     <input type="email" class="form-control" id="email" v-model="email" v-validate="'required|email'" name="email" ref="email" placeholder="Entre seu email"> <!-- regrex="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"  required> -->
-                                    <span class="alert-danger">{{ errors.first('email') }}</span>
+                                    <span class="alert-danger" v-for="error in errors.collect('email')" :key="error.index">{{ error }}</span>
 
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="confirm_email">Confirmar Email</label>
                                     <input type="email" class="form-control" id="confirm_email" v-model="confirm_email" v-validate="'required|confirmed:email'" data-vv-as="email" placeholder="Confirmar o email" name="confirm_email" required>
-                                    <span class="alert-danger" v-if="errors.has('confirm_email')">{{ errors.first('confirm_email') }}</span>
+                                    <span class="alert-danger" v-for="error in errors.collect('confirm_email')" :key="error.index">{{ error }}</span>
                                 </div>
 
                                 <div class="form-group col-md-6">
                                     <label for="password">Senha</label>
-                                    <input type="password" class="form-control" id="password" v-model="password" v-validate="{alpha: true, numeric: true, required: true, min: 7, max: 10}" name="password" ref="password" placeholder="Entre sua senha(no minimo um némero)" title="Deve conter no minimo um número" pattern="(?=.*\d)(?=.*[a-zA-Z]).{8,}">
+                                    <input type="password" class="form-control" id="password" v-model="password" v-validate="{alpha_num: true, required: true}" name="password" ref="password" placeholder="Entre sua senha(no minimo um número)" title="Deve conter no minimo um número" pattern="(?=.*\d)(?=.*[a-zA-Z]).{8,}">
+                                    <span class="alert-danger" v-for="error in errors.collect('password')" :key="error.index">{{ error }}</span>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="confirm_password">Confirmar Senha</label>
                                     <input type="password" class="form-control" id="confirm_password" v-model="confirm_password" v-validate="'required|confirmed:password'" data-vv-as="password" pattern="(?=.*\d)(?=.*[a-zA-Z]).{8,}" title="Deve conter no minimo um número" placeholder="Confirme a senha" name="confirm_password" required>
-                                    <span class="alert-danger" v-if="errors.has('confirm_password')">{{ errors.first('confirm_password') }}</span>
+                                    
+                                    <span class="alert-danger" v-for="error in errors.collect('confirm_password')" :key="error.index">{{ error }}</span>
 
                                 </div>
                             </div>
@@ -170,7 +172,7 @@
 
 
                 this.$validator.validateAll().then((valid) => {
-
+                    //console.log(valid)
 
                     if (valid) {
                         ax.post("/log/", this.datus)

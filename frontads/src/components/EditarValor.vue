@@ -50,38 +50,38 @@
 
                                             <div class="form-group col-md-3 text-left">
                                                 <label for="caches_1h">1h</label>
-                                                <input type="number" class="form-control" id="caches_1h" name="caches_1h" min="50.00" step="10.00" v-model="caches_1h" placeholder="000,00">
+                                                <input type="number" class="form-control" id="caches_1h" name="caches_1h" min="50.00" step="10.00" v-model="caches_1h" placeholder="000.00">
                                             </div>
 
                                             <div class="form-group col-md-3 text-left">
                                                 <label for="caches_2h">2hs</label>
-                                                <input type="number" class="form-control" id="caches_2h" name="caches_2h" min="50.00" step="10.00" v-model="caches_2h" placeholder="000,00">
+                                                <input type="number" class="form-control" id="caches_2h" name="caches_2h" min="50.00" step="10.00" v-model="caches_2h" placeholder="000.00">
                                             </div>
                                             <div class="form-group col-md-3 text-left">
                                                 <label for="caches_3h">3hs</label>
-                                                <input type="number" class="form-control" id="caches_3h" name="caches_3h" min="50.00" step="10.00" v-model="caches_3h" placeholder="000,00">
+                                                <input type="number" class="form-control" id="caches_3h" name="caches_3h" min="50.00" step="10.00" v-model="caches_3h" placeholder="000.00">
                                             </div>
                                             <div class="form-group col-md-3 text-left">
                                                 <label for="caches_4h">4hs</label>
-                                                <input type="number" class="form-control" id="caches_4h" name="caches_4h" min="50.00" step="10.00" v-model="caches_4h" placeholder="000,00">
+                                                <input type="number" class="form-control" id="caches_4h" name="caches_4h" min="50.00" step="10.00" v-model="caches_4h" placeholder="000.00">
                                             </div>
 
                                             <div class="form-group col-md-3 text-left">
                                                 <label for="caches_pernoite_dia_util">Pernoite (dia útil)</label>
-                                                <input type="number" class="form-control" id="caches_pernoite_dia_util" name="caches_pernoite_dia_util" min="50.00" step="10.00" v-model="caches_pernoite_dia_util" placeholder="000,00">
+                                                <input type="number" class="form-control" id="caches_pernoite_dia_util" name="caches_pernoite_dia_util" min="50.00" step="10.00" v-model="caches_pernoite_dia_util" placeholder="000.00">
                                             </div>
 
                                             <div class="form-group col-md-3 text-left">
                                                 <label for="caches_sexta_noite">Sexta (noite)</label>
-                                                <input type="number" class="form-control" id="caches_sexta_noite" name="caches_sexta_noite" min="50.00" step="10.00" v-model="caches_sexta_noite" placeholder="000,00">
+                                                <input type="number" class="form-control" id="caches_sexta_noite" name="caches_sexta_noite" min="50.00" step="10.00" v-model="caches_sexta_noite" placeholder="000.00">
                                             </div>
                                             <div class="form-group col-md-3 text-left">
                                                 <label for="caches_fim_semana_dia">Final de Semana (dia)</label>
-                                                <input type="number" class="form-control" id="caches_fim_semana_dia" name="caches_fim_semana_dia" min="50.00" step="10.00" v-model="caches_fim_semana_dia" placeholder="000,00">
+                                                <input type="number" class="form-control" id="caches_fim_semana_dia" name="caches_fim_semana_dia" min="50.00" step="10.00" v-model="caches_fim_semana_dia" placeholder="000.00">
                                             </div>
                                             <div class="form-group col-md-3 text-left">
                                                 <label for="caches_sabado_noite">Sabádo (noite)</label>
-                                                <input type="number" class="form-control" id="caches_sabado_noite" name="caches_sabado_noite" min="50.00" step="10.00" v-model="caches_sabado_noite" placeholder="000,00">
+                                                <input type="number" class="form-control" id="caches_sabado_noite" name="caches_sabado_noite" min="50.00" step="10.00" v-model="caches_sabado_noite" placeholder="000.00">
                                             </div>
 
 

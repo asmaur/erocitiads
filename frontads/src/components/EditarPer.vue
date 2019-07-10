@@ -128,7 +128,7 @@
                                             </div>-->
                                             <div class="form-group col-md-6 text-left">
                                                 <label for="fone">Telefone</label>
-                                                <input type="fone" class="form-control" id="fone" placeholder="(DDD) 999 999 999" name="fone" v-model="fone" required>
+                                                <input type="fone" class="form-control" id="fone" v-mask="'(##) ###-###-###'" placeholder="(DDD) 999 999 999" name="fone" v-model="fone" required>
                                             </div>
 
                                         </div>
@@ -253,7 +253,7 @@
         },
         computed:{
             phone: function(){
-                return '55'+this.fone;
+                return '55'+this.fone.replace(/\D/g, '');
             }
         },
         methods:{
