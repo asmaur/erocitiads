@@ -29,8 +29,11 @@
                         <!--To give the control a modern look, I have applied a stylesheet in the parent span.-->
                         <span class="btn btn-success fileinput-button">
                             <!--<span>Clique para selecionar seus arquivos</span>-->
-                            <input type="file" name="files[]" id="attachments" multiple @change="handleFileUpload" accept="image/jpeg, image/png, image/gif," :disabled="active"><br />
+                            <input type="file" name="files[]" id="attachments" multiple @change="handleFileUpload" v-validate="'ext:jpeg,jpg,png|size:300'" accept="image/jpeg, image/png, image/gif," :disabled="active">
+                            <br />
+                            
                         </span>
+                        <span class="alert-danger" v-for="error in errors.collect('files[]')" :key="error.index">{{ error }}</span>
 
                     </div>
 
@@ -131,7 +134,7 @@
                 } else if (fileType == "image/jpg") {
                     return true;
                 } else {
-                    console.log(fileType);
+                    //console.log(fileType);
                     return false;
                 }
                 
@@ -165,7 +168,7 @@
             removeImg: function(im){
                 this.attachments.splice(im,1);
                 //console.log(this.attachments);
-                console.log("removed: "+im);
+                //console.log("removed: "+im);
             },
             
             addData(){
@@ -177,11 +180,11 @@
                     
                     for(var i = 0; i < this.attachments.length; i++ ){
                         let file = this.attachments[i];
-                        console.log(file);
+                        //console.log(file);
                         formData.append('file[' + i + ']', file);
                     }
                     //formData.append("files", this.attachments)
-                    console.log(formData)
+                    //console.log(formData)
                     ax.post("img/"+this.$route.params.id+"/add/", formData, {
                             headers: {
                                 'Content-Type': 'multipart/form-data'
@@ -191,7 +194,9 @@
                               //this.getData(),     
                               location.reload(),
                         )
-                        .catch(e => console.log(e)) 
+                        .catch(error => {
+                            this.$noty.error(error.response.data.message)
+                        }) 
                     
                 }
             },

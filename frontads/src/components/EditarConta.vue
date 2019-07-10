@@ -87,17 +87,18 @@
                     <div class="modal-body">
                         <fieldset>
                             <div class="form-row">
-
-                                <div class="form-group col-md-4">
-                                    <label for="telefone">Telefone</label>
-                                    <input type="text" class="form-control" id="telefone" v-model="phone" v-validate="{required: true}" minlength="16" min="16" v-mask="'(##) ##-#-####-####'" placeholder="Entre seu telephone" name="telefone" required>
-                                    <span class="alert-danger">{{ errors.first('telefone') }}</span>
-                                </div>
+                                
                                 <div class="form-group col-md-3">
                                     <label for="code_area">Codigo de área</label>
                                     <input type="tel" class="form-control" id="code_area" maxlength="2" v-model="code_area" v-mask="'##'" placeholder="Entre seu DDD" name="code_area" pattern="^\d{2}$" required>
                                 </div>
 
+                                <div class="form-group col-md-4">
+                                    <label for="telefone">Telefone</label>
+                                    <input type="text" class="form-control" id="telefone" v-model="phone" v-validate="{required: true}" minlength="11" min="11" v-mask="'###-###-###'" placeholder="Entre seu telephone" name="telefone" required>
+                                    <span class="alert-danger">{{ errors.first('telefone') }}</span>
+                                </div>
+                                
                                 <div class="form-group col-md-4">
                                     <label for="cpf">CPF</label>
                                     <input type="tel" class="form-control" id="cpf" v-model="cpf" placeholder="Entre seu CPF" name="cpf" v-mask="'###.###.###-##'" required>
@@ -110,12 +111,12 @@
 
                                 <div class="form-group col-md-6">
                                     <label for="Estado">Estado</label>
-                                    <input type="email" class="form-control" :value="state" disabled>
+                                    <input type="text" class="form-control" :value="state" disabled>
                                 </div>
 
                                 <div class="form-group col-md-6">
                                     <label for="cidade">Cidade</label>
-                                    <input type="email" class="form-control" :value="city" disabled>
+                                    <input type="text" class="form-control" :value="city" disabled>
                                 </div>
 
 
@@ -204,7 +205,7 @@
                     ])
             },
             updateUser() {
-                console.log(this.datus)
+                //console.log(this.datus)
                 this.$validator.validateAll()
 
                 if ($.isEmptyObject(this.datus)) {
@@ -215,23 +216,23 @@
                             this.$noty.success(response.data.message)
                             this.getData()
                             this.logout()
-                        
+
                         })
                         .catch(error => {
                             this.$noty.error(error.response.data.message)
                         })
                 }
             },
-            logout(){
+            logout() {
                 localStorage.clear();
                 this.$noty.warning("Você editou seus dados, Faça login novamente ..!");
-                setTimeout(()=>{
+                setTimeout(() => {
                     this.$router.push("/")
-                },1000);
+                }, 1000);
             },
 
             updateAgente() {
-                console.log(this.datum)
+                //console.log(this.datum)
                 this.$validator.validateAll()
 
                 if ($.isEmptyObject(this.datum)) {

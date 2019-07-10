@@ -26,6 +26,22 @@ let router =  new Router({
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
     },
+      {
+      path: '/resetar-senha/:reset/',
+      name: 'resetar',
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "about" */ './views/Resetar.vue')
+    },
+      {
+      path: '/esqueci-minha-senha',
+      name: 'esqueci',
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "about" */ './views/Esqueci.vue')
+    },
     {
         path: '/dash/:id/',
         name: 'dash',
@@ -43,6 +59,18 @@ let router =  new Router({
         path: '/users/account/:id/',
         name: 'account',
         component: () => import(/* webpackChunkName: "profile" */ './views/Conta.vue'),
+        beforeEnter(to, from, next) {
+            if (isAuthenticated()) {
+                next();
+            } else {
+                next('/');
+            }
+        }
+    },
+      {
+        path: '/users/coins/:id/',
+        name: 'getbalance',
+        component: () => import(/* webpackChunkName: "profile" */ './views/Coins.vue'),
         beforeEnter(to, from, next) {
             if (isAuthenticated()) {
                 next();
@@ -159,18 +187,7 @@ let router =  new Router({
             }
         }
     },
-      {
-        path: '/pay/:slug/:id/:pk/',
-        name: 'pagamento',
-        component: () => import(/* webpackChunkName: "profile" */ './views/Pay.vue'),
-        beforeEnter(to, from, next) {
-            if (isAuthenticated()) {
-                next();
-            } else {
-                next('/');
-            }
-        }
-    },
+      
     {
         path: '/e/i/:slug/:id/',
         name: 'editar imagens',

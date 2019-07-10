@@ -10,6 +10,7 @@ import 'lightgallery/dist/css/lightgallery.min.css'
 
 
 
+
 //js third party
 import 'jquery'
 window.$ = require('jquery')
@@ -17,6 +18,8 @@ window.JQuery = require('jquery')
 import 'popper.js/dist/popper.min.js'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import 'lightgallery/dist/js/lightgallery.min.js'
+import './assets/js/parallax.min.js'
+
 
 
 //css custom
@@ -48,7 +51,10 @@ Vue.use(VueNoty, {
 })
 
 import VeeValidate from 'vee-validate'
-Vue.use(VeeValidate)
+const config = {
+    locale: 'pt_br',
+}
+Vue.use(VeeValidate, config)
 
 
 
@@ -61,7 +67,7 @@ Vue.use(VueTheMask)
 
 
 
-Vue.config.productionTip = false
+Vue.config.productionTip = true
 
 new Vue({
   router,

@@ -83,10 +83,10 @@ diseabled = #CDCDCD
     color: #fff;
 }
 #main{
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/hero-bg.png);
-    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/hero-bg.png);
-    background: -moz-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/hero-bg.png);
-    background: -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/hero-bg.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../imagen/ads-img2.jpg);
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../imagen/ads-img2.jpg);
+    background: -moz-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../imagen/ads-img2.jpg);
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../imagen/ads-img2.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -131,10 +131,10 @@ diseabled = #CDCDCD
 /* about */
 
 #about{
-    min-height: 80vh;
+    min-height: 40%;
     background-color: #fff;
-    padding-top: 7rem;
-    padding-bottom: 5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
 }
 #about .card{
     border: 0;
@@ -145,53 +145,39 @@ diseabled = #CDCDCD
 }
 #about h4#who{
     position: relative;
-    margin-top: 25vh;
+    margin-top: 2%;
     color: rgb(233,84,32,.7);
 }
 .card-icon{
     margin: .5rem;
 }
 .card-icon i{
-    color: #E95420;  /* #3EB34F  //#19B6EE */
+    color: #E95420; 
 }
 #about p{
     color: #000;
 }
 /* end about */
- 
-  
- /* work */
-
-#work{
-    min-height: 80vh;
-    background-color: #f7f7f7;
-}
-.work{
-    position: relative;
-}
-#work:before {
-    content: '';
-    background: linear-gradient( rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.90)), url(../img/group-bg.png) no-repeat center center;
-    background-size: cover;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 50%;
-}
-
-/* end work */
   
 
 
   /* services */
 
 #services{
-    min-height: 80vh;
+    min-height: 80%;
     padding-top: 7rem;
     padding-bottom: 5rem;
     //background-color: #f7f7f7;
+}
+#services{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../imagen/ads-img1.jpg);
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../imagen/ads-img1.jpg);
+    background: -moz-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../imagen/ads-img1.jpg);
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../imagen/ads-img1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    object-fit: cover;
 }
 #services .card{
     border: 0;
@@ -200,10 +186,42 @@ diseabled = #CDCDCD
     border-radius: 0;
 }
 #services h4{
-    color: #000;
+    color: #fff;
+}
+#services .card{
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    border: solid 2px #f2f3f4;
+    color: #fff;
 }
 /* end services */
-      
+
+/* newsletter */
+
+#notif {
+    position: relative;
+    top: 5%;
+    text-align: center;
+}
+#notif.card button{
+    background-color: gold;
+    color: #fff;
+    background-color: #E95420;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    border: 0;
+}
+.card{
+    background-color: transparent;
+    border: solid 2px #f2f3f4;
+}
+#newsletter{
+    min-height: 10vh;
+    background-color: #E95420;
+}
+
+/* end newsletter */
 
 
   /* divas */
@@ -311,8 +329,13 @@ OWL Carasoul
   
 /* contact */
 #contact{
-    min-height: 40vh;
-    background-color: #f7f7f7;
+    min-height: 20vh;
+    background-color: #111;
+    color: #fff;
+}
+#contact a{
+    color: #fff;
+    text-decoration: none;
 }
 #contact h3{
     text-transform: capitalize;

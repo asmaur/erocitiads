@@ -184,9 +184,7 @@
                         (this.pf = response.data.pk),
                         (this.foto = response.data.pk)
                     ])
-                    .catch(response => {
-                        console.log(response);
-                    });
+                    .catch();
             },
             deleteProfile(){
                 ax.delete("pf/" + this.$route.params.id + "/")

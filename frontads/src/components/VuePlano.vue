@@ -36,12 +36,12 @@ export default {
             
             ax.get('mem/',)
                 .then(response => [ this.mem = response.data, ])
-                .catch(response => { console.log(response); });
+                .catch();
         },
         getPlanos(){
             ax.get('mem/'+this.$route.params.id+'/planos/',)
                 .then(response => [ this.planos = response.data, ])
-                .catch(response => { console.log(response) })
+                .catch()
         },
     },
     created(){

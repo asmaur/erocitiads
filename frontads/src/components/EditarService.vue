@@ -251,7 +251,7 @@
                 } else{
                     delete this.datus.beijo_na_boca;
                 }
-                console.log(this.datus);
+                //console.log(this.datus);
             },
 
             duplas: function(ero2) {
@@ -261,7 +261,7 @@
                 } else{
                     delete this.datus.duplas;
                 }
-                console.log(this.datus);
+                //console.log(this.datus);
             },
 
             ejacula_corpo: function(ero3) {
@@ -271,7 +271,7 @@
                 } else{
                     delete this.datus.ejacula_corpo;
                 }
-                console.log(this.datus);
+                //console.log(this.datus);
             },
 
             fan_disfarces: function(ero4) {
@@ -281,7 +281,7 @@
                 } else{
                     delete this.datus.fan_disfarces;
                 }
-                console.log(this.datus);
+                //console.log(this.datus);
             },
 
             massagem_erotica: function(ero5) {
@@ -291,7 +291,7 @@
                 } else{
                     delete this.datus.massagem_erotica;
                 }
-                console.log(this.datus);
+                //console.log(this.datus);
             },
 
             namoradinha: function(ero6) {
@@ -302,7 +302,7 @@
                 } else{
                     delete this.datus.namoradinha;
                 }
-                console.log(this.datus);
+                //console.log(this.datus);
 
             },
 

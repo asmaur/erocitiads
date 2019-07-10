@@ -121,9 +121,11 @@
                                     <div class="custom-file col-md-12">
                                         <label class="custom-file-label" for="customFile" v-if="file">{{file.name}}</label>
                                         <label class="custom-file-label" for="customFile" v-else>Escolha a foto de capa</label>
-                                        <input type="file" class="custom-file-input" v-validate="'ext:jpeg,jpg,png'" data-vv-as="capa" id="capa" name="capa" @change="handleFileChange" required>
-                                        <span v-if="file">{{file.name}}</span><br>
-                                        <span class="alert-danger" v-if="errors.has('capa')">{{ errors.first('capa') }}</span>
+                                        <input type="file" class="custom-file-input" v-validate="'ext:jpeg,jpg,png|size:3000'" data-vv-as="capa" id="capa" name="capa" @change="handleFileChange" required>
+                                        <span v-if="file">{{file.name}}</span>
+                                        <br>
+                                        <span class="alert-danger" v-for="error in errors.collect('capa')" :key="error.index">{{ error }}</span>
+                                        
                                     </div>
 
                                 </div>
@@ -217,31 +219,33 @@
 
             create() {
 
-                this.$validator.validateAll()
+                this.$validator.validateAll().then((valid) => {
+                
 
-                if (!this.errors.any()) {
-                    
-                    this.datus.pk = this.pk
-                    this.datus.phone = this.fone
-                    var formData = new FormData()
-                    formData.append('file', this.file)
-                    formData.append('datus', JSON.stringify(this.datus))
+                    if (valid) {
 
-                    axigen.post("pf/", formData)
-                        .then(response => {
-                            this.$noty.success(response.data.message);
-                            setTimeout(() => {
-                                location.reload();
-                            }, 500);
-                        })
-                        .catch(error => {
-                            this.$noty.error(error.response.data.message)
-                        })
+                        this.datus.pk = this.pk
+                        this.datus.phone = this.fone
+                        var formData = new FormData()
+                        formData.append('file', this.file)
+                        formData.append('datus', JSON.stringify(this.datus))
 
-                } else {
-                    this.$noty.error("O formulário contêm erros, corrija os erros.")
+                        axigen.post("pf/", formData)
+                            .then(response => {
+                                this.$noty.success(response.data.message);
+                                setTimeout(() => {
+                                    location.reload();
+                                }, 500);
+                            })
+                            .catch(error => {
+                                this.$noty.error(error.response.data.message)
+                            })
 
-                }
+                    } else {
+                        this.$noty.error("O formulário contêm erros, corrija os erros.")
+
+                    }
+                })
 
 
 
@@ -256,7 +260,7 @@
         watch: {
 
             getcity: function(state) {
-                console.log(state.id);
+                //console.log(state.id);
                 axios.get("https://servicodados.ibge.gov.br/api/v1/localidades/estados/" + state.id + "/municipios")
                     .then(response => {
                         this.cities = response.data

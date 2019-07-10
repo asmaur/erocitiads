@@ -1,7 +1,7 @@
 <template>
 
     <div class="col-md-4">
-    
+
         <div class="card">
             <div class="card-header">
                 <h3>{{plano.membership_type}} </h3>
@@ -18,14 +18,14 @@
                     <li>kjasgdjkgs</li>
                     <li>kjasgdjkgs</li>
                 </ul>
-                
+
 
                 <p> <small>Esse plano é valido por {{plano.valide_time}} dias.</small> </p>
             </div>
 
             <div class="card-footer">
-              <!--  <router-link :to="'/pay/'+slug+'/'+pk+'/'+plano.id+'/'" class="btn btn-primary btn-block ativar" disabled="PlanStatus" >ATIVAR</router-link> -->
-                <button class="btn btn-primary btn-block ativar" @click="goPlano" :disabled="isBasic"  >ATIVAR </button>
+                <!--  <router-link :to="'/pay/'+slug+'/'+pk+'/'+plano.id+'/'" class="btn btn-primary btn-block ativar" disabled="PlanStatus" >ATIVAR</router-link> -->
+                <button class="btn btn-primary btn-block ativar" @click="setPlano">ATIVAR </button>
                 <!--  <a href="plano.html" class="btn btn-primary btn-block disabled">Aprovado</a> -->
 
             </div>
@@ -37,9 +37,8 @@
 </template>
 
 <script>
-    
-    import $ from "jquery"
-    
+    import ax from '../api.js'
+
     export default {
         name: "MemItem",
         props: {
@@ -47,51 +46,46 @@
             pk: Number,
             slug: String,
             planos: {},
-            
+
         },
-        data(){
-            return{
+        data() {
+            return {
                 //isBasic: true,
                 plan: [],
+                datus: {},
+                user: {},
             }
         },
-        computed:{
-            isBasic(){
-                if($.isEmptyObject(this.planos)){
-                    if(this.plano.membership_type=="Basic"){
-                        return false;
-                    }else{
-                        return true;
-                    }
-                }else{
-                    let self = this;
-                    for(let pl in this.planos){
-                        self.plan.push(pl.membership_type)
-                    }
-                    if("Basic" in this.plan){
-                        return false;
-                    }else{
-                        
-                        if(this.plano.membership_type=="Basic"){
-                        return false;
-                    }else{
-                        return true;
-                    }
-                        
-                        
-                        
-                    }
-                }
-            },
+        computed: {
+
         },
         methods: {
-            goPlano(){
-                this.$router.push('/pay/'+this.slug+'/'+this.pk+'/'+this.plano.id+'/')
+            goPlano() {
+                //this.$router.push('/pay/'+this.slug+'/'+this.pk+'/'+this.plano.id+'/')
             },
-           
-            
-            
+            setPlano() {
+                this.datus.perId = this.$route.params.id;
+                this.datus.userId = this.user.id;
+                this.datus.planoId = this.plano.id;
+
+                ax.post("pay/setplanos/", this.datus)
+                    .then(response => {
+                        this.$noty.success(response.data.message)
+                        setTimeout(() => {
+                            location.reload();
+                        }, 2000);
+                    })
+                    .catch(error => {
+                        this.$noty.error(error.response.data.message)
+                    })
+            },
+
+
+
         },
-        
+        created() {
+            this.user = JSON.parse(localStorage.getItem("user"));
+        }
+
     }
 </script>

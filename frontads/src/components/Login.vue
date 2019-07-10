@@ -23,7 +23,7 @@
                         </div>
 
                         <div class="form-group">
-                            <a href="">Esqueci minha senha.</a>
+                            <router-link to="esqueci-minha-senha" data-dismiss="modal">Esqueci minha senha.</router-link>
                         </div>
 
 

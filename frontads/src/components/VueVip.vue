@@ -9,25 +9,16 @@
       </div>
 
       <div class="card-body card-list">
-       <!-- <ul>
-          <li>kjshjd kjasgdjkgs</li>
-          <li>kjasgdjkgs</li>
-          <li>kjasgdjkgs</li>
-          <li>kjasgdjkgs</li>
-          <li>kjasgdjkgs</li>
-        </ul>
+       
 
         <p>
-          <small>Esse plano é valido por 7 dias.</small>
+          O Selo <strong>VIP</strong> é concedido aos parceiros, seja por tempo de uso ou pelos números de *Plano Diamond* conquistados. 
         </p>
-        <p>
-          <small>valido até dia 23/12/12.</small>
-        </p> -->
+        
       </div> 
 
       <div class="card-footer">
-        <a href="plano.html" class="btn btn-primary btn-block ativar">SOLICITAR SEU SELO VIP</a>
-        <a href="plano.html" class="btn btn-primary btn-block pendente">Pendente</a>
+          <button class="btn btn-primary btn-block ativar" @click="SoliciteVip">SOLICITAR SEU SELO VIP</button>
         <a href="plano.html" class="btn btn-primary btn-block disabled">Aprovado</a>
       </div>
     </div>
@@ -35,10 +26,26 @@
 </template>
 
 <script>
+    
+    import ax from '../api'
+    
 export default {
     name: "VueVip",
     props:{
         pk: Number,
     },
+    data(){
+        return{
+            enabled: null,
+        }
+    },
+    methods:{
+        SoliciteVip(){
+            ax.post("mem/"+this.pk+"/vip/")
+            .then(response => {
+                this.$noty.info(response.data.message)
+            })
+        }
+},
 }
 </script>

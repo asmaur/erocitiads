@@ -140,6 +140,20 @@ diseabled = #CDCDCD
     height: 35px;
     margin-right: 1rem;
 }
+#credito-valor{
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+#credito-valor p{
+    margin-top: 3.2rem; 
+    position: relative; 
+    //margin-left: .5rem; 
+    font-size: 1.3rem; 
+    font-weight: 600; 
+    color: #000;
+}
 
 
 

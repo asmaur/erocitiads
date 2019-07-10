@@ -74,7 +74,7 @@
                                             <div class="form-group col-md-4 text-left">
 
                                                 <label for="idade">Idade</label>
-                                                <input type="number" min="18" class="form-control" id="idade" name="idade" placeholder="Entre sua idade" v-model="idade" required>
+                                                <input type="number" min="18" class="form-control" id="idade" v-validate="{required:true, min_value:18}" name="idade" placeholder="Entre sua idade (maior de idade)" v-model="idade" required>
                                             </div>
 
                                             <div class="form-group col-md-4 text-left">
@@ -298,17 +298,17 @@
             },
             
             addData: function(){
-                console.log(this.datus, this.capa);
+                //console.log(this.datus, this.capa);
                 var formData = new FormData();                
                 if(this.capa != this.old_val.capa){
-                    console.log("New foto");
+                    //console.log("New foto");
                     formData.append('capa', this.capa);
-                    console.log(formData);
+                    //console.log(formData);
                 }
                 if(!$.isEmptyObject(this.datus)){
-                    console.log(this.datus);
+                    //console.log(this.datus);
                     formData.append('datus', JSON.stringify(this.datus));
-                    console.log(formData);
+                    //console.log(formData);
                 }
                 
                 if(formData.has("capa") || formData.has("datus")){
@@ -420,7 +420,7 @@
                 }else{
                     delete this.datus.phone;
                 }  
-                console.log(this.datus);
+                //console.log(this.datus);
             },
 
             codigo: function(ero8) {
@@ -448,7 +448,7 @@
                 //console.log(this.datus);
             },
             is_working: function(ero10) {
-                console.log(this.old_val.is_working != ero10);
+                //console.log(this.old_val.is_working != ero10);
                 if (this.old_val.is_working != ero10){  
                     
                     this.datus.is_working = ero10;  

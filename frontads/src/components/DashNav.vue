@@ -22,6 +22,8 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{user.username}}</a>
                         <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="navbarDropdown">
                             <!-- <a class="dropdown-item" href="/dash/account">Ver Conta</a> -->
+                            <router-link class="dropdown-item" :to="'/users/coins/'+user.id+'/'">Meus Créditos</router-link>
+                            <div class="dropdown-divider"></div>
                             <router-link class="dropdown-item" :to="'/users/account/'+user.id+'/'">Ver Conta</router-link>
                             <div class="dropdown-divider"></div>
                             <!--  <a class="dropdown-item" href="/dash/editar/account">Editar conta</a> -->

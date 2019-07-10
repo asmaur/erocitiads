@@ -168,7 +168,18 @@ import ax from "../api.js";
                 .then(response => {this.users=response.data})
             },
             deleteConta(id){
-                console.log(id);
+                ax.delete("users/"+id+"/")
+                    .then(response => {
+                        localStorage.clear();
+                        this.$noty.success(response.data.message);
+                        
+                        setTimeout(()=>{
+                            this.$router.push("/")
+                        },100);
+                    })
+                    .catch(error => {
+                        this.$noty.error(error.response.data.message);
+                    })
             },
         },
         created(){

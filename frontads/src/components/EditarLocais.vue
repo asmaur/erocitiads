@@ -145,7 +145,7 @@
             },
             
             addData: function(){
-                console.log(this.datus);
+                //console.log(this.datus);
                 
                 if($.isEmptyObject(this.datus)){
                     this.$noty.error("Cuidado com as  mudanças, Tente de novo..!");

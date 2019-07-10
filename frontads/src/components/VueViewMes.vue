@@ -63,11 +63,7 @@
 
                         this.loaded = true
                     })
-                    .catch(err => {
-                        //this.errorMessage = err.response.data.error
-                        //this.showError = true
-                        console.log(err);
-                    })
+                    .catch()
             },
 
 

@@ -118,7 +118,7 @@
 
                                         <div class="modal-footer" style="display: flex; justify-content: space-between;">
 
-                                           <!-- <button type="reset" class="btn btn-secondary fechar" data-dismiss="modal">Resetar</button> -->
+                                            <!-- <button type="reset" class="btn btn-secondary fechar" data-dismiss="modal">Resetar</button> -->
                                             <button type="submit" class="btn btn-primary entrar">Salvar</button>
                                         </div>
                                     </form>
@@ -174,9 +174,9 @@
                     this.men = this.dados.men,
                     this.women = this.dados.women,
                     this.couple = this.dados.couple,
-                    
+
                     /* old val */
-                    
+
                     this.old_val.twitter = this.dados.twitter,
                     this.old_val.instagram = this.dados.instagram,
                     this.old_val.cabelo = this.dados.cabelo,
@@ -193,143 +193,145 @@
 
 
             addData() {
-                
-               // console.log(jQuery.isEmptyObject(this.datus));  
-                
-                if($.isEmptyObject(this.datus)){
+
+                // console.log(jQuery.isEmptyObject(this.datus));  
+
+                if ($.isEmptyObject(this.datus)) {
                     this.$noty.error("Cuidado com as  mudanças, Tente de novo..!");
-                }else{
-                    
-                    console.log(JSON.stringify(this.datus));
-                    
-                    ax.put("dados/" + this.$route.params.id + "/", JSON.stringify(this.datus))
-                        .then(response => { this.$noty.success( response.data.message), console.log(response.data)},
-                              this.getData(),     
-                        )
-                        .catch(error => {
-                            this.$noty.error(error.response.data.message)
-                        })
-                    
-                }
-                
-                
-
-            },
-        },
-        created() {
-            this.getData();
-        },
-        watch: {
-            twitter: function(ero1){
-
-                if (this.old_val.twitter != ero1){
-                    this.datus.twitter = ero1;
-                }else{
-                   delete this.datus.twitter;
-                }
-                //console.log(this.datus);
-            },
-
-            instagram: function(ero2){
-                if (this.old_val.instagram != ero2){
-                    //delete this.datus.instagram;
-                    this.datus.instagram = ero2;
-                }else{
-                    delete this.datus.instagram;
-                }
-                //console.log(this.datus);
-            },
-
-            cabelo: function(ero3){
-                if (this.old_val.cabelo != ero3){
-                    //delete this.datus.cabelo;
-                    this.datus.cabelo = ero3;
-                }else{
-                    delete this.datus.cabelo;
-                }
-                //console.log(this.datus);
-            },
-
-            etnia: function(ero4) {
-                if (this.old_val.etnia != ero4){
-                    //delete this.datus.etnia;
-                    this.datus.etnia = ero4;
                 } else {
-                    delete this.datus.etnia;
-                }
-                //console.log(this.datus);
+
+                    //console.log(JSON.stringify(this.datus));
+
+                    ax.put("dados/" + this.$route.params.id + "/", JSON.stringify(this.datus))
+                        .then(response => {
+                                this.$noty.success(response.data.message)
+                                    //console.log(response.data)
+                                    this.getData()
+                            })
+                            .catch(error => {
+                                this.$noty.error(error.response.data.message)
+                            })
+
+                        }
+
+
+
+                },
             },
-
-            seios: function(ero5){
-                if (this.old_val.seios != ero5){
-                    //delete this.datus.seios;
-                    this.datus.seios = ero5;
-                }else{
-                   delete this.datus.seios;
-                }
-                //console.log(this.datus);
+            created() {
+                this.getData();
             },
+            watch: {
+                twitter: function(ero1) {
 
-            tipo: function(ero6){
+                    if (this.old_val.twitter != ero1) {
+                        this.datus.twitter = ero1;
+                    } else {
+                        delete this.datus.twitter;
+                    }
+                    //console.log(this.datus);
+                },
 
-                if (this.old_val.tipo != ero6){
-                    //delete this.datus.tipo;
-                    this.datus.tipo = ero6;
-                }else{
-                   delete this.datus.tipo;
-                }
-                //console.log(this.datus);
+                instagram: function(ero2) {
+                    if (this.old_val.instagram != ero2) {
+                        //delete this.datus.instagram;
+                        this.datus.instagram = ero2;
+                    } else {
+                        delete this.datus.instagram;
+                    }
+                    //console.log(this.datus);
+                },
+
+                cabelo: function(ero3) {
+                    if (this.old_val.cabelo != ero3) {
+                        //delete this.datus.cabelo;
+                        this.datus.cabelo = ero3;
+                    } else {
+                        delete this.datus.cabelo;
+                    }
+                    //console.log(this.datus);
+                },
+
+                etnia: function(ero4) {
+                    if (this.old_val.etnia != ero4) {
+                        //delete this.datus.etnia;
+                        this.datus.etnia = ero4;
+                    } else {
+                        delete this.datus.etnia;
+                    }
+                    //console.log(this.datus);
+                },
+
+                seios: function(ero5) {
+                    if (this.old_val.seios != ero5) {
+                        //delete this.datus.seios;
+                        this.datus.seios = ero5;
+                    } else {
+                        delete this.datus.seios;
+                    }
+                    //console.log(this.datus);
+                },
+
+                tipo: function(ero6) {
+
+                    if (this.old_val.tipo != ero6) {
+                        //delete this.datus.tipo;
+                        this.datus.tipo = ero6;
+                    } else {
+                        delete this.datus.tipo;
+                    }
+                    //console.log(this.datus);
+
+                },
+
+                dote: function(ero7) {
+
+                    if (this.old_val.dote != ero7) {
+                        //delete this.datus.dote;
+                        this.datus.dote = ero7;
+                    } else {
+                        delete this.datus.dote;
+                    }
+                    //console.log(this.datus);
+
+                },
+
+                men: function(ero8) {
+
+                    if (this.old_val.men != ero8) {
+                        //delete this.datus.men;
+                        this.datus.men = ero8;
+                    } else {
+                        delete this.datus.men;
+                    }
+                    //console.log(this.datus);
+
+                },
+
+                women: function(ero9) {
+
+                    if (this.old_val.women != ero9) {
+                        //delete this.datus.women;
+                        this.datus.women = ero9;
+                    } else {
+                        delete this.datus.women;
+                    }
+                    //console.log(this.datus);
+
+                },
+
+                couple: function(ero10) {
+
+                    if (this.old_val.couple != ero10) {
+                        //delete this.datus.couple;
+                        this.datus.couple = ero10;
+                    } else {
+                        delete this.datus.couple;
+                    }
+                    //console.log(this.datus);
+
+                },
 
             },
-
-            dote: function(ero7){
-
-                if (this.old_val.dote != ero7){
-                    //delete this.datus.dote;
-                    this.datus.dote = ero7;
-                }else{
-                   delete this.datus.dote;
-                }
-                //console.log(this.datus);
-
-            },
-
-            men: function(ero8){
-
-                if (this.old_val.men != ero8){
-                    //delete this.datus.men;
-                    this.datus.men = ero8;
-                }else{
-                   delete this.datus.men;
-                }
-                //console.log(this.datus);
-
-            },
-
-            women: function(ero9){
-
-                if (this.old_val.women != ero9){
-                    //delete this.datus.women;
-                    this.datus.women = ero9;
-                }else{
-                    delete this.datus.women;
-                }
-                //console.log(this.datus);
-
-            },
-
-            couple: function(ero10){
-
-                if (this.old_val.couple != ero10){
-                    //delete this.datus.couple;
-                    this.datus.couple = ero10;
-                }else{
-                   delete this.datus.couple;
-                }
-                //console.log(this.datus);
-
-            },
-            
-        },
-    };
+        };
 </script>

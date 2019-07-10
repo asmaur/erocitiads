@@ -163,9 +163,14 @@ diseabled = #CDCDCD
     background-color: #111;
     color: #fff;
 }
+#contact a{
+    color: red;
+    text-decoration: none;
+}
 #contact i{
     color: #fff;
     padding: .8rem;
+    text-decoration: none;
 }
 #contact h3{
     text-transform: capitalize;
