@@ -189,10 +189,14 @@
                                 'Content-Type': 'multipart/form-data'
                             }
                           })
-                        .then(response => { this.$noty.success( response.data.message)},
-                              //this.getData(),     
-                              location.reload(),
-                        )
+                        .then(response => { 
+                            this.$noty.success( "Processando as imagens")
+                            this.$noty.success( response.data.message)
+                                 setTimeout(() => {
+                                    location.reload();
+                                }, 10000);
+                              
+                    })
                         .catch(error => {
                             this.$noty.error(error.response.data.message)
                         }) 

@@ -258,7 +258,7 @@
     import DashNav from "@/components/DashNav.vue";
     import $ from "jquery"
     import ax from "../api.js";
-    import '@/assets/css/preview.css'
+    
 
 
     export default {
@@ -312,3 +312,6 @@
 
     }
 </script>
+
+
+<style scoped src="@/assets/css/preview.css"></style>

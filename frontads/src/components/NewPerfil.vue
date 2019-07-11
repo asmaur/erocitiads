@@ -234,11 +234,13 @@
 
                         ax.post("pf/", formData)
                             .then(response => {
-                                this.$noty.success(response.data.message);
+                                this.$noty.success( "Processando os dados")
+                                
                                 $('#criar-perfil').modal('hide')
+                                this.$noty.success(response.data.message);
                                 setTimeout(() => {
                                     location.reload();
-                                }, 500);
+                                }, 5000);
                             })
                             .catch(error => {
                                 this.$noty.error(error.response.data.message)
