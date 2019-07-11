@@ -62,7 +62,11 @@ Vue.use(VeeValidate, config)
 import VueTheMask from 'vue-the-mask'
 Vue.use(VueTheMask)
 
+import VueAnalytics from 'vue-analytics'
 
+Vue.use(VueAnalytics, {
+  id: 'UA-143260985-1'
+})
  
 
 
