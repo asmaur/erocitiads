@@ -29,11 +29,11 @@
                         <!--To give the control a modern look, I have applied a stylesheet in the parent span.-->
                         <span class="btn btn-success fileinput-button">
                             <!--<span>Clique para selecionar seus arquivos</span>-->
-                            <input type="file" name="files[]" id="attachments" multiple @change="handleFileUpload" v-validate="'ext:jpeg,jpg,png|size:550'" accept="image/jpeg, image/png, image/jpg," :disabled="active">
+                            <input type="file" name="files" id="attachments" multiple @change="handleFileUpload" v-validate="'ext:jpeg,jpg,png|size:550'" accept="image/jpeg, image/png, image/jpg," :disabled="active">
                             <br />
                             
                         </span>
-                        <span class="alert-danger" v-for="error in errors.collect('files[]')" :key="error.index">{{ error }}</span>
+                         <span class="alert-danger" v-for="error in errors.collect('files')" :key="error.index">{{ error }}</span> 
 
                     </div>
 
@@ -85,8 +85,7 @@
                 // Each file will need to be sent as FormData element
                 data: new FormData(),
                 
-                errors: {
-                },
+                
                 percentCompleted: 0, // You can store upload progress 0-100 in value, and show it on the screen
                 
                 filelen: 0,

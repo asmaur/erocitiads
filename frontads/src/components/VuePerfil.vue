@@ -138,6 +138,7 @@
 <script>
     export default {
         name: "VuePerfil",
+        
         props: {
             per: {},
             slug: String,

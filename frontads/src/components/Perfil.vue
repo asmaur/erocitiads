@@ -120,8 +120,6 @@
 
 <script>
     
-    
-    
     import VuePerfil from "@/components/VuePerfil.vue";
     import VueValor from "@/components/VueValor.vue";
     import VueService from "@/components/VueService.vue";
@@ -138,6 +136,7 @@
     import VueViewMes from "@/components/VueViewMes.vue";
 
     import ax from "../api.js";
+    import $ from "jquery"
     
 
     export default {
@@ -190,7 +189,8 @@
                 ax.delete("pf/" + this.$route.params.id + "/")
                     .then(response => {
                         this.$noty.success(response.data.message)
-                    this.agente = JSON.parse(localStorage.getItem("agente"))
+                            this.agente = JSON.parse(localStorage.getItem("agente"))
+                            $('#deletar-perfil').modal('hide')
                         setTimeout(()=>{
                                 this.$router.push("/dash/"+this.agente.id+"/")
                             },1000);

@@ -90,45 +90,11 @@
 
                                         </div>
 
-
-                                     <!--   <div class="form-row">
-
-
-                                            <div class="form-group col-md-6">
-                                                <input type="text" hidden value="rs" name="code">
-                                                <label for="Estado">Estado</label>
-                                                <select class="form-control" id="estado" name="estado" required>
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                    <option>4</option>
-                                                    <option>5</option>
-                                                </select>
-                                            </div>
-
-                                            <div class="form-group col-md-6">
-                                                <label for="cidade">Cidade</label>
-                                                <select class="form-control" id="cidade" name="cidade" required>
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                    <option>4</option>
-                                                    <option>5</option>
-                                                </select>
-                                            </div>
-
-
-                                        </div> -->
-
                                         <div class="form-row">
 
-                                           <!-- <div class="form-group col-md-6 text-left">
-                                                <label for="codigo">Código de área</label>
-                                                <input type="text" class="form-control" id="codigo" placeholder="(DDD)" v-model="codigo" required>
-                                            </div>-->
                                             <div class="form-group col-md-6 text-left">
                                                 <label for="fone">Telefone</label>
-                                                <input type="fone" class="form-control" id="fone" v-mask="'(##) ###-###-###'" placeholder="(DDD) 999 999 999" name="fone" v-model="fone" required>
+                                                <input type="fone" class="form-control" id="fone" v-mask="'## (##) #-####-####'" placeholder="55 (DDD) 9-9999-9999" name="fone" v-model="fone" required>
                                             </div>
 
                                         </div>
@@ -138,20 +104,14 @@
                                         <div class="form-row">
                                             <div class="form-group col-md-12 text-left">
                                                 <label for="description">Descrição</label>
-                                                <textarea name="description" id="description" class="form-control" v-model="description" cols="20" rows="5" maxlength="500" placeholder="Descrição com no máximo 300 palavras" required></textarea>
+                                                <textarea name="description" id="description" class="form-control" v-model="description" cols="20" rows="5" maxlength="550" placeholder="Descrição com no máximo 300 palavras" required></textarea>
                                             </div>
 
                                         </div>
                                         
                                         <hr>
                                         <div class="form-row">
-                                          <!--  <div class="form-group col-md-4">
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="mulher" v-model="per.is_active" name="mulher" style>
-                                                    <label class="custom-control-label" for="mulher">Ativo</label>
-                                                </div>
-                                            </div> -->
-
+                                          
                                             <div class="form-group col-md-4 text-left">
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input" id="is_working" v-model="is_working" name="is_working" >
@@ -253,7 +213,7 @@
         },
         computed:{
             phone: function(){
-                return '55'+this.fone.replace(/\D/g, '');
+                return this.fone.replace(/\D/g, '');
             }
         },
         methods:{
@@ -314,9 +274,10 @@
                 if(formData.has("capa") || formData.has("datus")){
                     
                     ax.put("pf/" + this.$route.params.id + "/", formData, )
-                        .then(response => { this.$noty.success( response.data.message) },
-                              this.getData(),     
-                        )
+                        .then(response => { 
+                            this.$noty.success( response.data.message)
+                            this.getData()     
+                        })
                         .catch(error => {
                             this.$noty.error(error.response.data.message)
                         })

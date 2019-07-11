@@ -223,9 +223,9 @@
                     //console.log(JSON.stringify(this.datus));
                     
                     ax.put("services/" + this.$route.params.id + "/", JSON.stringify(this.datus))
-                        .then(response => { this.$noty.success( response.data.message) },
-                              this.getData(),      
-                        )
+                        .then(response => { this.$noty.success( response.data.message)
+                              this.getData()      
+                        })
                         .catch(error => {
                             this.$noty.error(error.response.data.message)
                         })

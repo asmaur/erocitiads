@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export default axios.create({
-    //baseURL: 'http://localhost:8000/api/v1/ads/',
+    //baseURL: 'http://localhost:8000/ads/',
     baseURL: 'https://api.erociti.com/ads/',
     headers: {
         'Content-Type': 'application/json',

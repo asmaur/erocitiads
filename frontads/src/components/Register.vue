@@ -124,6 +124,7 @@
 <script>
     import axigen from '../genapi.js';
     import axios from 'axios'
+    import $ from 'jquery'
 
     export default {
         name: 'Register',

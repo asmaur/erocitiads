@@ -47,6 +47,7 @@
     // @ is an alias to /src
     import PerItem from '@/components/PerItem.vue'
     import ax from '../api.js'
+    
     export default {
         name: 'dashboard',
         components: {

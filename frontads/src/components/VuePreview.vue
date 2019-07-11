@@ -16,11 +16,11 @@
                     <div class="col-md-8 offset-md-2 text-center">
 
                         <div style="display: flex; align-items: center; justify-content: space-between; margin: 1rem;">
-                            <i class="far fa-star" style="color: #fff;"></i> 
+                            <i class="far fa-star" style="color: #fff;"></i>
 
                             <h3 class="display-4"> {{per.nome}} {{per.sobrenome}} </h3>
 
-                            <i class="far fa-star" style="color: #fff;"></i> 
+                            <i class="far fa-star" style="color: #fff;"></i>
                         </div>
 
 
@@ -84,7 +84,7 @@
                                         <li class="list-group-item" v-if="per.dote"> Cabelos - {{per.dote}} cm</li>
                                         <li class="list-group-item">
                                             <p class="mb-1">{{per.description}}</p>
-                                            
+
                                         </li>
                                     </ul>
 
@@ -92,8 +92,8 @@
                                 </div>
 
                             </div>
-                            
-                             <div class="row">
+
+                            <div class="row">
 
                                 <div class="col-md-12">
 
@@ -107,7 +107,7 @@
                                         <li class="list-group-item" v-if="val.caches_sexta_noite"> Sexta noite - R$ {{val.caches_sexta_noite}}</li>
                                         <li class="list-group-item" v-if="val.caches_fim_semana_dia"> Fim de semana dia - R$ {{val.caches_fim_semana_dia}}</li>
                                         <li class="list-group-item" v-if="val.caches_sabado_noite"> Sabádo noite - R$ {{val.caches_sabado_noite}}</li>
-                                        
+
                                     </ul>
 
                                     <p class="text-center"> <strong> Adicionais podem ser cobrados.</strong> </p>
@@ -170,7 +170,7 @@
                                         <li class="list-group-item" v-show="loc.motel">Moteis</li>
                                         <li class="list-group-item" v-show="loc.local_proprio">Local Próprio</li>
                                         <li class="list-group-item" v-show="loc.sobre_convite">Sobre convite (ir até o cliente)</li>
-                                        
+
                                     </ul>
 
 
@@ -178,7 +178,7 @@
 
                             </div>
 
-                           
+
 
                         </div>
 
@@ -227,7 +227,7 @@
                         </a>
 
 
-                      <!--  <a href="img/gallery-list-5.jpg" class="col-sm-12 col-md-6 col-lg-4 item">
+                        <!--  <a href="img/gallery-list-5.jpg" class="col-sm-12 col-md-6 col-lg-4 item">
                             <img class="img-fluid image scale-on-hover" src="../assets/img/gallery-list-5.jpg">
                         </a>
 
@@ -255,60 +255,60 @@
 </template>
 
 <script>
+    import DashNav from "@/components/DashNav.vue";
     import $ from "jquery"
-import ax from "../api.js";
-import '../assets/css/preview.css'
-import DashNav from "@/components/DashNav.vue";
+    import ax from "../api.js";
+    import '@/assets/css/preview.css'
 
-export default {
-    name: "VuePreview",
-    
-    data(){
-        return{
-            per: {},
-            dados: {},
-            esp: {},
-            val: {},
-            fotos: {},
-            loc: {},                
-            serv: {},
-        }
-    },
-    components: {
-        DashNav,
-    },
-    methods:{
-        
-        getData(){
-            ax.get("pf/"+this.$route.params.id+"/")
-                .then(response => [
-                    this.per = response.data,
-                    this.dados = response.data.dados[0],
-                    this.esp = response.data.especiais[0],
-                    this.loc = response.data.locais[0],
-                    this.val = response.data.valores[0],
-                    this.serv = response.data.services[0],
-                    this.fotos = response.data.images,
-                ])
-                .catch(() => {
-                    this.$noty.error("Erro ao carregar dados..!");
-                }) 
-        },
-            
-    },
-    beforeUpdate(){
-         $(document).ready(function() {
-            $("#wiz-galery").lightGallery({
-                download : false,
+
+    export default {
+        name: "VuePreview",
+
+        data() {
+            return {
+                per: {},
+                dados: {},
+                esp: {},
+                val: {},
+                fotos: {},
+                loc: {},
+                serv: {},
             }
-            ); 
-        });
-    },
-       
-    created(){
-        this.getData();
-       
-    },
+        },
+        components: {
+            DashNav,
+        },
+        methods: {
 
-}
+            getData() {
+                ax.get("pf/" + this.$route.params.id + "/")
+                    .then(response => [
+                        this.per = response.data,
+                        this.dados = response.data.dados[0],
+                        this.esp = response.data.especiais[0],
+                        this.loc = response.data.locais[0],
+                        this.val = response.data.valores[0],
+                        this.serv = response.data.services[0],
+                        this.fotos = response.data.images,
+                    ])
+                    .catch(() => {
+                        this.$noty.error("Erro ao carregar dados..!");
+                    })
+            },
+
+        },
+        beforeUpdate() {
+            $(document).ready(function() {
+                $("#wiz-galery").lightGallery({
+                    download: false,
+                });
+            });
+        },
+
+        created() {
+            this.getData();
+
+        },
+
+    }
 </script>

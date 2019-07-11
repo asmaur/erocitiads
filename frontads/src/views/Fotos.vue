@@ -11,7 +11,7 @@ import DashNav from "@/components/DashNav.vue";
 import EditarFotos from "@/components/EditarFotos.vue";
 
 	export default{
-		name: "Image",
+		name: "Fotos",
 		components:{
 			DashNav,
 			EditarFotos,

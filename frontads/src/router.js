@@ -191,7 +191,7 @@ let router =  new Router({
     {
         path: '/e/i/:slug/:id/',
         name: 'editar imagens',
-        component: () => import(/* webpackChunkName: "profile" */ './views/Image.vue'),
+        component: () => import(/* webpackChunkName: "profile" */ './views/Fotos.vue'),
         beforeEnter(to, from, next) {
             if (isAuthenticated()) {
                 next();
