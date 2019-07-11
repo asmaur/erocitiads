@@ -184,17 +184,19 @@
                     }
                     //formData.append("files", this.attachments)
                     //console.log(formData)
+                    this.$noty.info( "Processando as imagens, Aguarde",{timeout: 8000,})
+                    
                     ax.post("img/"+this.$route.params.id+"/add/", formData, {
                             headers: {
                                 'Content-Type': 'multipart/form-data'
                             }
                           })
                         .then(response => { 
-                            this.$noty.success( "Processando as imagens")
+                            
                             this.$noty.success( response.data.message)
                                  setTimeout(() => {
                                     location.reload();
-                                }, 10000);
+                                }, 2000);
                               
                     })
                         .catch(error => {

@@ -174,20 +174,25 @@
 
                 this.$validator.validateAll().then((valid) => {
                     //console.log(valid)
-
+                    
                     if (valid) {
+                        
+                        this.$noty.info( "Processando os dados, Aguarde",{timeout: 8000,})
+                                
+                        $('#registerModal').modal('hide')                        
+                        
                         axigen.post("/log/", this.datus)
                             .then(response => {
                                 this.$noty.success(response.data.message)
-                                $('#registerModal').modal('hide')
+                                
                                 setTimeout(() => {
                                     this.$router.push("/")
-                                }, 100);
+                                }, 1000);
                             })
                             .catch(error => {
-                                setTimeout(() => {
+                                
                                     this.$noty.error(error.response.data.message)
-                                }, 100);
+                                
 
                             })
                     } else {

@@ -231,16 +231,18 @@
                         var formData = new FormData()
                         formData.append('file', this.file)
                         formData.append('datus', JSON.stringify(this.datus))
-
-                        ax.post("pf/", formData)
-                            .then(response => {
-                                this.$noty.success( "Processando os dados")
+                        
+                        this.$noty.success( "Processando os dados, Aguarde",{timeout: 8000,})
                                 
-                                $('#criar-perfil').modal('hide')
+                        $('#criar-perfil').modal('hide')
+                        
+                        
+                        ax.post("pf/", formData)
+                            .then(response => {                                
                                 this.$noty.success(response.data.message);
                                 setTimeout(() => {
                                     location.reload();
-                                }, 5000);
+                                }, 2000);
                             })
                             .catch(error => {
                                 this.$noty.error(error.response.data.message)
