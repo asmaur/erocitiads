@@ -29,7 +29,7 @@
                         <!--To give the control a modern look, I have applied a stylesheet in the parent span.-->
                         <span class="btn btn-success fileinput-button">
                             <!--<span>Clique para selecionar seus arquivos</span>-->
-                            <input type="file" name="files" id="attachments" multiple @change="handleFileUpload" v-validate="'ext:jpeg,jpg,png|size:550'" accept="image/jpeg, image/png, image/jpg," :disabled="active">
+                            <input type="file" name="files" id="attachments" multiple @change="handleFileUpload" v-validate="'ext:jpeg,jpg,png|size:3500'" accept="image/jpeg, image/png, image/jpg," :disabled="active">
                             <br />
                             
                         </span>

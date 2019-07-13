@@ -104,7 +104,7 @@
                                         <div class="form-row">
                                             <div class="form-group col-md-12 text-left">
                                                 <label for="description">Descrição</label>
-                                                <textarea name="description" id="description" class="form-control" v-model="description" cols="20" rows="5" maxlength="550" placeholder="Descrição com no máximo 300 palavras" required></textarea>
+                                                <textarea name="description" id="description" class="form-control" v-model="description" cols="20" rows="5" maxlength="550" placeholder="Descrição com no máximo 500 palavras" required></textarea>
                                             </div>
 
                                         </div>
@@ -141,15 +141,14 @@
                                                     <li>
                                                         arquivos aceitos (jpg, png, jpeg)
                                                     </li>
-                                                    <li>
-                                                        arquivos aceitos (jpg, png, jpeg)
-                                                    </li>
+
 
                                                 </ul>
                                                 <!--To give the control a modern look, I have applied a stylesheet in the parent span.-->
                                                 <span class="btn btn-success fileinput-button">
                                                   <!--  <span>Foto de capa</span> -->
-                                                    <input type="file" name="capa" id="capa" @change="handleFileUpload" accept="image/jpeg, image/png, image/gif,">
+                                                    <input type="file" name="capa" id="capa" @change="handleFileUpload" v-validate="'ext:jpeg,jpg,png|size:3500'" accept="image/jpeg, image/png, image/jpg,">
+                                                    <span class="alert-danger" v-for="error in errors.collect('capa')" :key="error.index">{{ error }}</span>
                                                     <!-- <input type="file" name="files[]" id="files" multiple accept="image/jpeg, image/png, image/gif,"> -->
                                                     <br />
                                                 </span>

@@ -3,9 +3,9 @@
     <div>
         <nav class="navbar navbar-expand-lg wiz-dash-nav">
             <!--  <a class="navbar-brand" href="/dash"> -->
-            <router-link class="navbar-brand" :to="'/dash/'+agente.id+'/'">                
-                EroCiti ads 
-            </router-link> 
+            <router-link class="navbar-brand" :to="'/dash/'+agente.id+'/'">
+                EroCiti ads
+            </router-link>
             <button class="navbar-toggler wiz-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -29,57 +29,57 @@
                             <!--  <a class="dropdown-item" href="/dash/editar/account">Editar conta</a> -->
                             <router-link class="dropdown-item" :to="'/users/e/account/'+user.id+'/'">Editar Conta</router-link>
                             <div class="dropdown-divider"></div>
-                            <button class="dropdown-item btn" href="#" @click="logout">Sair</button> 
+                            <button class="dropdown-item btn" href="#" @click="logout">Sair</button>
                         </div>
                     </li>
                 </ul>
             </div>
         </nav>
 
-        <NewPerfil :pk="agente.id"/>
+        <NewPerfil :pk="agente.id" />
     </div>
 </template>
 
 <script>
     // @ is an alias to /src
     //import { mapState, mapActions } from 'vuex'
-    
+
     import NewPerfil from "@/components/NewPerfil.vue";
 
     export default {
         name: "DashNav",
-        
-        data(){
-            return{
+
+        data() {
+            return {
                 pk: null,
                 user: {},
                 agente: {},
             }
         },
-        computed:{
-            
+        computed: {
+
         },
         components: {
             NewPerfil
         },
-        methods:{
-           
-            getLocalData(){
+        methods: {
+
+            getLocalData() {
                 this.agente = JSON.parse(localStorage.getItem("agente"));
                 this.user = JSON.parse(localStorage.getItem("user"));
-            }, 
-            logout(){
+            },
+            logout() {
                 localStorage.clear();
                 this.$noty.warning("Você saiu da sua conta ..!");
-                setTimeout(()=>{
+                setTimeout(() => {
                     this.$router.push("/")
-                },100);
+                }, 100);
             },
         },
-        created(){
+        created() {
             this.getLocalData();
-            
+
         },
-        
+
     };
 </script>

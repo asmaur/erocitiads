@@ -2,7 +2,7 @@
     <div class="card">
         <div class="card-header" id="headingFive">
             <h5 class="mb-0">
-                <button class="btn btn-link btn-block collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Fotos</button>
+                <button class="btn btn-link btn-block collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Mais Fotos</button>
             </h5>
         </div>
         <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
@@ -15,7 +15,7 @@
                             </label>
                             <ul>
                                 <li>arquivos aceitos (jpg, png, jpeg)</li>
-                                <li>Numero maximo de arquivos de 25 com 500 KB cada</li>
+                                <li>Numero maximo de arquivos de 15 com 3MB cada</li>
                             </ul>
                         </div>
                     </fieldset>

@@ -49,6 +49,11 @@
 
 
                                             <div class="form-group col-md-3 text-left">
+                                                <label for="caches_1h">30min</label>
+                                                <input type="number" class="form-control" id="caches_30min" name="caches_30min" min="50.00" v-validate="'min_value:50.00'" step="10.00" v-model="caches_30min" placeholder="000.00">
+                                                <span class="alert-danger" v-for="error in errors.collect('caches_30min')" :key="error.index">{{ error }}</span>
+                                            </div>
+                                            <div class="form-group col-md-3 text-left">
                                                 <label for="caches_1h">1h</label>
                                                 <input type="number" class="form-control" id="caches_1h" name="caches_1h" min="50.00" v-validate="'min_value:50.00'" step="10.00" v-model="caches_1h" placeholder="000.00">
                                                 <span class="alert-danger" v-for="error in errors.collect('caches_1h')" :key="error.index">{{ error }}</span>
@@ -136,6 +141,7 @@
 
         data() {
             return {
+                caches_30min: null,
                 caches_1h: null,
                 caches_2h: null,
                 caches_3h: null,
@@ -153,7 +159,8 @@
             getData(){
                 ax.get("cash/" + this.$route.params.id + "/").then(response => [
                     (this.caches = response.data),
-
+                    
+                    this.caches_30min = this.caches.caches_30min,
                     this.caches_1h = this.caches.caches_1h,
                     this.caches_2h = this.caches.caches_2h,
                     this.caches_3h = this.caches.caches_3h,
@@ -166,6 +173,7 @@
                     
                     /* old val */
                     
+                    this.old_val.caches_30min = this.caches.caches_30min,
                     this.old_val.caches_1h = this.caches.caches_1h,
                     this.old_val.caches_2h = this.caches.caches_2h,
                     this.old_val.caches_3h = this.caches.caches_3h,
@@ -191,7 +199,8 @@
                     //console.log(JSON.stringify(this.datus));
                     
                     ax.put("cash/" + this.$route.params.id + "/", JSON.stringify(this.datus))
-                        .then(response => { this.$noty.success( response.data.message)
+                        .then(response => { 
+                            this.$noty.success( response.data.message)
                               this.getData()     
                         })
                         .catch(error => {
@@ -293,6 +302,16 @@
                 }else{
                     delete this.datus.caches_sabado_noite;
                 }
+                //console.log(this.datus);
+            },
+            
+            caches_30min: function(ero9){
+                
+                if (this.old_val.caches_30min != ero9){                    
+                    this.datus.caches_30min = ero9;
+                }else{                    
+                    delete this.datus.caches_30min; 
+                } 
                 //console.log(this.datus);
             },
         },

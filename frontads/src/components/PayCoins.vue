@@ -49,7 +49,7 @@
             vcoin: function() {
 
                 var val = parseFloat(this.coin).toFixed(2);
-                
+
                 return val;
             }
         },
@@ -69,7 +69,7 @@
                     itemDescription: "Créditos Erociti",
                     itemAmount: this.vcoin,
                     itemQuantity: 1,
-                    reference: "REF"+(new Date).toISOString().replace(/\D/g, ''),
+                    reference: "REF" + (new Date).toISOString().replace(/\D/g, ''),
                     senderName: this.user.first_name + ' ' + this.user.last_name, //Jose Comprador
                     senderAreaCode: this.agente.code_area,
                     senderPhone: this.agente.phone, //999999999
@@ -96,9 +96,11 @@
                 this.$validator.validateAll().then((valid) => {
 
                     if (valid) {
-                        
-                        this.$noty.info("Processando...", {timeout: 8000,})
-                        
+
+                        this.$noty.info("Processando...", {
+                            timeout: 8000,
+                        })
+
                         this.checkout();
 
 

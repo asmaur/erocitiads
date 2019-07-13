@@ -64,7 +64,7 @@
         methods: {
             login() {
                 if ($.isEmptyObject(this.datus)) {
-                    this.$noty.error("Entre com seu nome de usuario e senha.");
+                    this.$noty.error("Entre com seu nome de usuário e senha.");
                 } else {
 
                     axigen.post("log/login/", this.datus)

@@ -99,6 +99,7 @@
 
                                     <ul class="list-group" style="margin-top: 1rem;">
                                         <li class="list-group-item active text-center">Valores</li>
+                                        <li class="list-group-item" v-if="val.caches_30min">30min - R$ {{val.caches_30min}}</li>
                                         <li class="list-group-item" v-if="val.caches_1h">1h - R$ {{val.caches_1h}}</li>
                                         <li class="list-group-item" v-if="val.caches_2h"> 2hs - R$ {{val.caches_2h}}</li>
                                         <li class="list-group-item" v-if="val.caches_3h"> 3hs - R$ {{val.caches_3h}}</li>
