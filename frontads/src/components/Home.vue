@@ -84,7 +84,29 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="card-icon"><i class="fa fa-anchor fa-2x"></i></div>
-                                <h4 class="card-title">Digital Marketing</h4>
+                                <h4 class="card-title">Multi Perfis</h4>
+                                <p class="card-text">Uma conta e vários perfis.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4 col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-icon"><i class="fa fa-anchor fa-2x"></i></div>
+                                <h4 class="card-title">Estatística</h4>
+                                <p class="card-text">Estatistica diaria de views e clics no seu perfil.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4 col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-icon"><i class="fa fa-anchor fa-2x"></i></div>
+                                <h4 class="card-title">Rede Sociais</h4>
                                 <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit volu ptatem accus.</p>
                             </div>
                         </div>
@@ -95,7 +117,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="card-icon"><i class="fa fa-anchor fa-2x"></i></div>
-                                <h4 class="card-title">Digital Marketing</h4>
+                                <h4 class="card-title">Parceirias</h4>
                                 <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit volu ptatem accus.</p>
                             </div>
                         </div>
@@ -106,29 +128,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="card-icon"><i class="fa fa-anchor fa-2x"></i></div>
-                                <h4 class="card-title">Digital Marketing</h4>
-                                <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit volu ptatem accus.</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-4 col-sm-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="card-icon"><i class="fa fa-anchor fa-2x"></i></div>
-                                <h4 class="card-title">Digital Marketing</h4>
-                                <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit volu ptatem accus.</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-4 col-sm-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="card-icon"><i class="fa fa-anchor fa-2x"></i></div>
-                                <h4 class="card-title">Digital Marketing</h4>
+                                <h4 class="card-title">Suporte personalizado.</h4>
                                 <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit volu ptatem accus.</p>
                             </div>
                         </div>
