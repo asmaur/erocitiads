@@ -3,9 +3,6 @@
 
     <div>
 
-        <no-nav />
-
-
         <div id="main" class="d-flex align-items-center justify-content-center">
             <div class="container">
                 <div class="row">
@@ -22,7 +19,7 @@
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Email</label>
                                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entre seu email" v-model="email" required>
-                                        <small id="emailHelp" class="form-text">Um link para a troca será enviado neste email.</small>
+                                        <small id="emailHelp" class="form-text" style="color:#fff;">Um link para a troca será enviado neste email.</small>
                                     </div>
 
                                     <button type="submit" class="btn btn-primary btn-block entrar">Submit</button>
@@ -41,10 +38,7 @@
 
         </div>
 
-        <Login />
-
-        <Register />
-
+     
 
     </div>
 
@@ -56,17 +50,11 @@
 <script>
     
     import ax from '../genapi'
-    import Login from '@/components/Login.vue'
-    import Register from '@/components/Register.vue'
-    import NoNav from '@/components/NoNav.vue'
+   
 
     export default {
         name: "VueEsqueci",
-        components: {
-            Login,
-            Register,
-            NoNav
-        },
+        
         data(){
             return{
                 email: null,

@@ -7,6 +7,7 @@ Vue.use(Router)
 
 var isAuthenticated = function(){
     var status  = localStorage.getItem("log") || false;
+    //status = true;
     return status;
 }
 
@@ -25,6 +26,22 @@ let router =  new Router({
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+    },
+      {
+      path: '/politica-de-privacidade',
+      name: 'privacidade',
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "about" */ './views/Privacy.vue')
+    },
+      {
+      path: '/termo-de-uso',
+      name: 'termo',
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "about" */ './views/Termo.vue')
     },
       {
       path: '/resetar-senha/:reset/',

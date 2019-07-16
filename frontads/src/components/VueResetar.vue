@@ -56,9 +56,6 @@
 
         </div>
 
-        <Login />
-
-        <Register />
 
 
     </div>
@@ -70,17 +67,11 @@
 
 <script>
     import ax from '../genapi'
-    import Login from '@/components/Login.vue'
-    import Register from '@/components/Register.vue'
-    import NoNav from '@/components/NoNav.vue'
+    
 
     export default {
         name: "VueResetar",
-        components: {
-            Login,
-            Register,
-            NoNav
-        },
+        
         data(){
             return {
                 valide: null,

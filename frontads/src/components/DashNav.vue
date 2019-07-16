@@ -2,7 +2,7 @@
 
     <div>
         <nav class="navbar navbar-expand-lg wiz-dash-nav">
-            <!--  <a class="navbar-brand" href="/dash"> -->
+
             <router-link class="navbar-brand" :to="'/dash/'+agente.id+'/'">
                 EroCiti ads
             </router-link>
@@ -21,12 +21,12 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{user.username}}</a>
                         <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="navbarDropdown">
-                            <!-- <a class="dropdown-item" href="/dash/account">Ver Conta</a> -->
+
                             <router-link class="dropdown-item" :to="'/users/coins/'+user.id+'/'">Meus Créditos</router-link>
                             <div class="dropdown-divider"></div>
                             <router-link class="dropdown-item" :to="'/users/account/'+user.id+'/'">Ver Conta</router-link>
                             <div class="dropdown-divider"></div>
-                            <!--  <a class="dropdown-item" href="/dash/editar/account">Editar conta</a> -->
+
                             <router-link class="dropdown-item" :to="'/users/e/account/'+user.id+'/'">Editar Conta</router-link>
                             <div class="dropdown-divider"></div>
                             <button class="dropdown-item btn" href="#" @click="logout">Sair</button>

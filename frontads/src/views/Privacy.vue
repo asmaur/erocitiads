@@ -2,21 +2,21 @@
 
     <div>
         <no-nav />
-        <vue-resetar />
+        <vue-privacy />
     </div>
 
 </template>
 
 
 <script>
-    import VueResetar from "@/components/VueResetar.vue";
     import NoNav from '@/components/NoNav.vue'
+    import VuePrivacy from '@/components/VuePrivacy.vue'
 
     export default {
-        name: "Esqueci",
+        name: "Privacy",
         components: {
-            VueResetar,
             NoNav,
+            VuePrivacy,
         }
     }
 </script>

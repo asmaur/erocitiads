@@ -113,7 +113,10 @@
                                     </label>
                                     <ul>
                                         <li>
-                                            arquivos aceitos (jpg, png, jpeg)
+                                            arquivos aceitos (jpg, png, jpeg).
+                                        </li>
+                                        <li>
+                                            Tamanho recomendável de <strong>1600x900px. </strong>
                                         </li>
 
                                     </ul>
@@ -121,11 +124,11 @@
                                     <div class="custom-file col-md-12">
                                         <label class="custom-file-label" for="customFile" v-if="file">{{file.name}}</label>
                                         <label class="custom-file-label" for="customFile" v-else>Escolha a foto de capa</label>
-                                        <input type="file" class="custom-file-input" v-validate="'ext:jpeg,jpg,png|size:3500|required'" data-vv-as="capa" id="capa" name="capa" @change="handleFileChange" required>
+                                        <input type="file" class="custom-file-input" ref="capa" v-validate="'ext:jpeg,jpg,png|size:3500|required'" data-vv-as="capa" id="capa" name="capa" @change="handleFileChange" required>
                                         <span v-if="file">{{file.name}}</span>
                                         <br>
                                         <span class="alert-danger" v-for="error in errors.collect('capa')" :key="error.index">{{ error }}</span>
-                                        
+
                                     </div>
 
                                 </div>
@@ -189,10 +192,14 @@
                 stateCode: null,
                 stateName: null,
                 cityName: null,
-                tipo: null,    
+                tipo: null,
                 file: "",
                 datus: {},
                 agente: {},
+                image: {
+                    height: '',
+                    width: ''
+                },
             };
         },
 
@@ -213,16 +220,53 @@
                 }
 
             },
+            fileSize() {
+
+                //const MAX_SIZE = 100000;
+                const MIN_WIDTH = 1600;
+                const MIN_HEIGHT = 900;
+
+                let varfile = this.$refs.capa.files[0];
+
+                let reader = new FileReader();
+
+                reader.readAsDataURL(varfile);
+                reader.onload = evt => {
+                    let img = new Image();
+                    img.onload = () => {
+                        this.image.width = img.width;
+                        this.image.height = img.height;
+                        this.imageLoaded = true;
+                        //console.log("Alt: "+this.image.height);
+                        //console.log("Cump: "+this.image.width);
+
+                        if (this.image.width < MIN_WIDTH) {
+                            alert('A sua imagen: '+this.image.width+'x'+this.image.height+'px é menor que o mínimo recomendado de: '+MIN_WIDTH+'x'+MIN_HEIGHT+'px');
+                            return;
+                        }
+                        if (this.image.height < MIN_HEIGHT) {
+                            alert('A sua imagen: '+this.image.width+'x'+this.image.height+'px é menor que o mínimo recomendado de: '+MIN_WIDTH+'x'+MIN_HEIGHT+'px');
+                            return;
+                        }
+                    }
+                    img.src = evt.target.result;
+
+                }
+            },
             handleFileChange(e) {
                 // Whenever the file changes, emit the 'input' event with the file data.
                 //this.$emit('input', e.target.files[0]);
+
                 this.file = e.target.files[0];
+
+                this.fileSize();
+
             },
 
             create() {
 
                 this.$validator.validateAll().then((valid) => {
-                
+
 
                     if (valid) {
 
@@ -231,14 +275,16 @@
                         var formData = new FormData()
                         formData.append('file', this.file)
                         formData.append('datus', JSON.stringify(this.datus))
-                        
-                        this.$noty.success( "Processando os dados, Aguarde",{timeout: 8000,})
-                                
+
+                        this.$noty.success("Processando os dados, Aguarde", {
+                            timeout: 8000,
+                        })
+
                         $('#criar-perfil').modal('hide')
-                        
-                        
+
+
                         ax.post("pf/", formData)
-                            .then(response => {                                
+                            .then(response => {
                                 this.$noty.success(response.data.message);
                                 setTimeout(() => {
                                     location.reload();

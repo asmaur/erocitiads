@@ -56,7 +56,7 @@
                                 <div class="form-group col-md-6">
                                     <label for="confirm_password">Confirmar Senha</label>
                                     <input type="password" class="form-control" id="confirm_password" v-model="confirm_password" v-validate="'required|confirmed:password'" data-vv-as="password" pattern="(?=.*\d)(?=.*[a-zA-Z]).{8,}" title="Deve conter no minimo um número" placeholder="Confirme a senha" name="confirm_password" required>
-                                    
+
                                     <span class="alert-danger" v-for="error in errors.collect('confirm_password')" :key="error.index">{{ error }}</span>
 
                                 </div>
@@ -101,6 +101,28 @@
 
                             </div>
 
+                            <div class="form-row">
+                                <div class="form-group col-md-6 offset-md-3 text-center">
+                                    <div class="custom-control custom-checkbox">
+                                                                                                                     
+                                        <input type="checkbox" class="custom-control-input" id="aceito" name="aceito" v-model="aceito" v-validate="{required: true}">
+                                        <label class="custom-control-label" for="aceito">  Li e aceito os termos e condições de uso </label>
+                                        <br>
+                                        <span class="alert-danger">{{ errors.first('aceito') }}</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <ol>
+                                        <li>Cadastrando-se você confirma <strong>Ser maior de 18 anos de idade.</strong> </li>
+                                        <li> Leu e concorda com os <router-link to="/termo-de-uso" data-dismiss="modal"> termos e condições de uso. </router-link>
+                                        </li>
+                                        <li>Ter ensaio profissional.</li>
+                                    </ol>
+                                </div>
+
+                            </div>
+
 
                             <div class="modal-footer" style="display: flex; justify-content: space-between;">
                                 <button type="button" class="btn btn-secondary fechar" data-dismiss="modal">Fechar</button>
@@ -139,6 +161,7 @@
                 code_area: null,
                 phone: null,
                 cpf: null,
+                aceito: null,
                 /* user */
                 username: null,
                 first_name: null,
@@ -174,25 +197,27 @@
 
                 this.$validator.validateAll().then((valid) => {
                     //console.log(valid)
-                    
+
                     if (valid) {
-                        
-                        this.$noty.info( "Processando os dados, Aguarde",{timeout: 8000,})
-                                
-                        $('#registerModal').modal('hide')                        
-                        
+
+                        this.$noty.info("Processando os dados, Aguarde", {
+                            timeout: 8000,
+                        })
+
+                        $('#registerModal').modal('hide')
+
                         axigen.post("/log/", this.datus)
                             .then(response => {
                                 this.$noty.success(response.data.message)
-                                
+
                                 setTimeout(() => {
                                     this.$router.push("/")
                                 }, 1000);
                             })
                             .catch(error => {
-                                
-                                    this.$noty.error(error.response.data.message)
-                                
+
+                                this.$noty.error(error.response.data.message)
+
 
                             })
                     } else {

@@ -33,8 +33,8 @@
             <div class="container">
                 <ul class="footer-navbar">
 
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms &amp; Conditions</a></li>
+                    <li> <router-link to="/politica-de-privacidade"> Política de privacidade </router-link> </li>
+                    <li> <router-link to="/termo-de-uso" >Termo &amp; Condições de Uso</router-link> </li>
                 </ul>
                 <div class="copy-text">
                     EroCiti Group. &copy; {{ano}} | Todos os direitos reservados. </div>

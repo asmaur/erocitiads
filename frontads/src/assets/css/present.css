@@ -83,10 +83,10 @@ diseabled = #CDCDCD
     color: #fff;
 }
 #main{
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../imagen/ads-img2.jpg);
-    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../imagen/ads-img2.jpg);
-    background: -moz-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../imagen/ads-img2.jpg);
-    background: -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../imagen/ads-img2.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../imagen/ads-img-1.jpg);
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../imagen/ads-img-1.jpg);
+    background: -moz-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../imagen/ads-img-1.jpg);
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../imagen/ads-img-1.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -170,10 +170,10 @@ diseabled = #CDCDCD
     //background-color: #f7f7f7;
 }
 #services{
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../imagen/ads-img1.jpg);
-    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../imagen/ads-img1.jpg);
-    background: -moz-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../imagen/ads-img1.jpg);
-    background: -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../imagen/ads-img1.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../imagen/ads-img-2.jpg);
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../imagen/ads-img-2.jpg);
+    background: -moz-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../imagen/ads-img-2.jpg);
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../imagen/ads-img-2.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -237,7 +237,7 @@ diseabled = #CDCDCD
     text-transform: capitalize;
 }
 #divas p{
-    text-transform: lowercase;
+    text-transform: capitalize;
 }
 #divas a{
     height: 350px;

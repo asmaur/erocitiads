@@ -9,7 +9,7 @@
                     <a id="login" href="#" data-toggle="modal" data-target="#loginModal" style="margin-right: 1rem;">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a id="registrar" data-toggle="modal" data-target="#registerModal" href="#">Registrar</a>
+                    <a id="registrar" data-toggle="modal" data-target="#registerModal" href="#">Inscreva-se</a>
                 </li>
             </ul>
 
@@ -24,6 +24,10 @@
             </button>
 
         </nav>
+        
+        <Login />
+
+        <Register />
 
     </div>
 
@@ -31,7 +35,15 @@
 
 
 <script>
+    
+    import Login from '@/components/Login.vue'
+    import Register from '@/components/Register.vue'
+    
     export default {
         name: "NoNav",
+        components:{
+            Register,
+            Login,
+        }
     }
 </script>

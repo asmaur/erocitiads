@@ -2,21 +2,21 @@
 
     <div>
         <no-nav />
-        <vue-resetar />
+        <vue-termo />
     </div>
 
 </template>
 
 
 <script>
-    import VueResetar from "@/components/VueResetar.vue";
     import NoNav from '@/components/NoNav.vue'
+    import VueTermo from '@/components/VueTermo.vue'
 
     export default {
-        name: "Esqueci",
+        name: "Termo",
         components: {
-            VueResetar,
             NoNav,
+            VueTermo,
         }
     }
 </script>

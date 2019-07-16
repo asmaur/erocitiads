@@ -7,9 +7,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-8 offset-md-2 text-center">
-                        <h2>Our Whole Message Is That We Are More Powerful Together</h2>
-
-
+                        <h2 style="text-transform: uppercase;">Seu anúncio ao alcance do Brasil.</h2>
+                        <p></p>
+                        
                         <button class="btn btn-outline-success btn-lg" data-toggle="modal" data-target="#loginModal" style="width: 9rem; margin-right: .3rem;">Login</button>
                         <button class="btn btn-outline-warning btn-lg" style="width: 10em; color: #fff;" data-toggle="modal" data-target="#registerModal">Inscreva-se</button>
 
@@ -83,9 +83,11 @@
                     <div class="col-md-4 col-sm-12 ">
                         <div class="card">
                             <div class="card-body">
-                                <div class="card-icon"><i class="fa fa-anchor fa-2x"></i></div>
+                                <div class="card-icon">
+                                    <i class="fas fa-users fa-2x"></i>
+                                </div>
                                 <h4 class="card-title">Multi Perfis</h4>
-                                <p class="card-text">Uma conta e vários perfis.</p>
+                                <p class="card-text">Criação e ativação de vários perfis usando uma única conta de usuário.</p>
                             </div>
                         </div>
 
@@ -94,9 +96,11 @@
                     <div class="col-md-4 col-sm-12">
                         <div class="card">
                             <div class="card-body">
-                                <div class="card-icon"><i class="fa fa-anchor fa-2x"></i></div>
-                                <h4 class="card-title">Estatística</h4>
-                                <p class="card-text">Estatistica diaria de views e clics no seu perfil.</p>
+                                <div class="card-icon">
+                                    <i class="fas fa-id-card fa-2x"></i>
+                                </div>
+                                <h4 class="card-title">Identité</h4>
+                                <p class="card-text">Ter seus perfis verificados usando os creditos disponiveis na sua conta.</p>
                             </div>
                         </div>
 
@@ -105,9 +109,11 @@
                     <div class="col-md-4 col-sm-12">
                         <div class="card">
                             <div class="card-body">
-                                <div class="card-icon"><i class="fa fa-anchor fa-2x"></i></div>
+                                <div class="card-icon">
+                                    <i class="fas fa-share-alt-square fa-2x"></i>
+                                </div>
                                 <h4 class="card-title">Rede Sociais</h4>
-                                <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit volu ptatem accus.</p>
+                                <p class="card-text">Alcance maior visibilidade optando pelo serviço de publicidade em redes socias.</p>
                             </div>
                         </div>
 
@@ -116,9 +122,11 @@
                     <div class="col-md-4 col-sm-12">
                         <div class="card">
                             <div class="card-body">
-                                <div class="card-icon"><i class="fa fa-anchor fa-2x"></i></div>
-                                <h4 class="card-title">Parceirias</h4>
-                                <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit volu ptatem accus.</p>
+                                <div class="card-icon">
+                                    <i class="fas fa-chart-line fa-2x"></i>
+                                </div>
+                                <h4 class="card-title">Statistik</h4>
+                                <p class="card-text">Acompanhar em tempo real o tráfego do público acessando seus perfis.</p>
                             </div>
                         </div>
 
@@ -127,9 +135,11 @@
                     <div class="col-md-4 col-sm-12">
                         <div class="card">
                             <div class="card-body">
-                                <div class="card-icon"><i class="fa fa-anchor fa-2x"></i></div>
-                                <h4 class="card-title">Suporte personalizado.</h4>
-                                <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit volu ptatem accus.</p>
+                                <div class="card-icon">
+                                    <i class="fas fa-headset fa-2x"></i>
+                                </div>
+                                <h4 class="card-title">Suporte Personalizado.</h4>
+                                <p class="card-text">Solicitar o nosso suporte em caso de problemas ou informação sobre nossos serviços.</p>
                             </div>
                         </div>
 
@@ -138,9 +148,11 @@
                     <div class="col-md-4 col-sm-12">
                         <div class="card">
                             <div class="card-body">
-                                <div class="card-icon"><i class="fa fa-anchor fa-2x"></i></div>
-                                <h4 class="card-title">Digital Marketing</h4>
-                                <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit volu ptatem accus.</p>
+                                <div class="card-icon">
+                                    <i class="far fa-handshake fa-2x"></i>
+                                </div>
+                                <h4 class="card-title">Co-working</h4>
+                                <p class="card-text">Seja nosso parceiro, oferece seus produtos e serviços para nossos usuarios.</p>
                             </div>
                         </div>
 
@@ -173,8 +185,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 offset-2 text-center">
-                        <h2 style="margin-top: 5rem;">Nossas divas</h2>
-                        <p>As que fizeram successo com nosso trabalho.</p>
+                        <h2 style="margin-top: 5rem;">As divas</h2>
+                        <p>As mais belas da cidade estão aqui. Faça parte você também.</p>
                     </div>
                 </div>
             </div>
@@ -344,7 +356,7 @@
                     <div class="col col-sm-12">
                         <div class="wb-section-heading text-center" style="padding: 4rem;">
                             <h3 class="wow fadeInUp animated animated">Clientes &amp; Parceiros</h3>
-                            <h6 class="wb-padding-18 wow fadeInUp animated animated">Clientes e parceiros de confiança em ramos diversos</h6>
+                            <h6 class="wb-padding-18 wow fadeInUp animated animated">Clientes e parceiros de confiança em ramos diversos.</h6>
                         </div>
                     </div>
                 </div>
@@ -420,14 +432,14 @@
     import Register from '@/components/Register.vue'
     import NewsLetter from '@/components/NewsLetter.vue'
 
-    import img1 from '@/assets/imagen/gallery-list-13.jpg'
-    import img2 from '@/assets/imagen/gallery-list-11.jpg'
-    import img3 from '@/assets/imagen/gallery-list-9.jpg'
-    import img4 from '@/assets/imagen/gallery-list-5.jpg'
-    import img5 from '@/assets/imagen/gallery-list-6.jpg'
-    import img6 from '@/assets/imagen/gallery-list-7.jpg'
-    import img7 from '@/assets/imagen/gallery-list-8.jpg'
-    import img8 from '@/assets/imagen/gallery-list-10.jpg'
+    import img1 from '@/assets/imagen/list-1.jpg'
+    import img2 from '@/assets/imagen/list-2.jpg'
+    import img3 from '@/assets/imagen/list-3.jpg'
+    import img4 from '@/assets/imagen/list-4.jpg'
+    import img5 from '@/assets/imagen/list-5.jpg'
+    import img6 from '@/assets/imagen/list-6.jpg'
+    import img7 from '@/assets/imagen/list-7.jpg'
+    import img8 from '@/assets/imagen/list-8.jpg'
 
     export default {
         name: 'Home',
