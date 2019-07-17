@@ -49,7 +49,7 @@
 
 
                                             <div class="form-group col-md-3 text-left">
-                                                <label for="caches_1h">30min</label>
+                                                <label for="caches_30min">30min</label>
                                                 <input type="number" class="form-control" id="caches_30min" name="caches_30min" min="50.00" v-validate="'min_value:50.00'" step="10.00" v-model="caches_30min" placeholder="000.00">
                                                 <span class="alert-danger" v-for="error in errors.collect('caches_30min')" :key="error.index">{{ error }}</span>
                                             </div>

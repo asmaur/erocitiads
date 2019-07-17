@@ -13,6 +13,10 @@
                             <div class="form-group col-md-12 text-center">
                                 <h5>Cachês</h5>
                             </div>
+                            <div class="form-group col-md-3 text-left">
+                                <label for="30min">30min</label>
+                                <input type="number" class="form-control" id="30min" name="30min" min="50.00" step="10.00" v-model="valor.caches_30min" placeholder="000,00">
+                            </div>
 
                             <div class="form-group col-md-3 text-left">
                                 <label for="1h">1h</label>
