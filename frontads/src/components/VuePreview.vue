@@ -218,13 +218,13 @@
                 <div class="container">
 
                     <div class="row" id="wiz-galery">
-                        <a :href="per.capa" class="col-sm-12 col-md-10 col-lg-10 item">
-                            <img class="img-fluid image scale-on-hover" id="wiz-large" :src="per.capa">
+                        <a :href="img_url+per.capa" class="col-sm-12 col-md-10 col-lg-10 item">
+                            <img class="img-fluid image scale-on-hover" id="wiz-large" :src="img_url+per.capa">
 
                         </a>
 
-                        <a v-for="imag in fotos" :href="imag.image_erociti" :key="imag.id" class="col-sm-12 col-md-6 col-lg-4 item">
-                            <img class="img-fluid image scale-on-hover" :src="imag.image_erociti">
+                        <a v-for="imag in fotos" :href="img_url+imag.image_erociti" :key="imag.id" class="col-sm-12 col-md-6 col-lg-4 item">
+                            <img class="img-fluid image scale-on-hover" :src="img_url+imag.image_erociti">
                         </a>
 
 
@@ -274,6 +274,7 @@
                 fotos: {},
                 loc: {},
                 serv: {},
+                img_url: 'https://api.erociti.com',
             }
         },
         components: {

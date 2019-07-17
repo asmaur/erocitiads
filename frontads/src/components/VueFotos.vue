@@ -2,7 +2,7 @@
     <div class="card">
         <div class="card-header" id="headingFive">
             <h5 class="mb-0">
-                <button class="btn btn-link btn-block collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Mais Fotos</button>
+                <button class="btn btn-link btn-block collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Minhas Fotos</button>
             </h5>
         </div>
         <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
@@ -21,7 +21,7 @@
                     </fieldset>
 
                     <div class="modal-footer" style="display: flex; justify-content: space-between;">
-                        <router-link :to="'/e/i/'+slug+'/'+pk+'/'" class="btn btn-primary entrar">VER FOTOS</router-link>
+                        <router-link :to="'/e/i/'+slug+'/'+pk+'/'" class="btn btn-primary entrar">ADICIONAR OU VER FOTOS</router-link>
                     </div>
 
                     <div class="container">
