@@ -9,7 +9,7 @@
             </div>
 
             <a :href="imag.image_erociti" class="wiz-card">
-                <img class="img-fluid" :src="imag.image_erociti" alt="">
+                <img class="img-fluid" :src="img_url+imag.image_erociti" alt="">
             </a>
         </div>
     </div>
@@ -28,6 +28,11 @@ export default{
     props:{
         imag: {},
     },
+    data(){
+            return{
+                img_url: 'https://api.erociti.com',
+            }
+        },
     
     methods:{
         removeImg: function(id){

@@ -93,12 +93,12 @@
                                     </div>
                                 </div> -->
 
-                                <div class="form-group col-md-4">
+                               <!-- <div class="form-group col-md-4">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="trab" v-model="per.is_working" name="trab" style>
                                         <label class="custom-control-label" for="trab">Perfil Trabalhando</label>
                                     </div>
-                                </div>
+                                </div> -->
 
 
 
@@ -109,7 +109,7 @@
                             <div class="form-row">
                                 <div class="col-md-1">
 
-                                    <img :src="per.capa" class="img-fluid" alt="">
+                                    <img :src="img_url+per.capa" class="img-fluid" alt="">
 
                                     <span class="btn btn-success fileinput-button">
 
@@ -138,7 +138,11 @@
 <script>
     export default {
         name: "VuePerfil",
-        
+        data(){
+            return{
+                img_url: 'https://api.erociti.com',
+            }
+        },
         props: {
             per: {},
             slug: String,
