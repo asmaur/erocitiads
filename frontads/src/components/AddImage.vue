@@ -22,14 +22,17 @@
                                 arquivos aceitos (jpg, png, jpeg)
                             </li>
                             <li>
-                                Numero maximo de arquivos de 15 com 500 KB cada 
+                                Numero máximo de arquivos de 15 com 1MB cada 
                             </li>
 
-                        </ul>
+                        </ul>                       
+                        
+                       
+                        
                         <!--To give the control a modern look, I have applied a stylesheet in the parent span.-->
                         <span class="btn btn-success fileinput-button">
-                            <!--<span>Clique para selecionar seus arquivos</span>-->
-                            <input type="file" name="files" id="attachments" multiple @change="handleFileUpload" v-validate="'ext:jpeg,jpg,png|size:3500'" accept="image/jpeg, image/png, image/jpg," :disabled="active">
+
+                            <input type="file" name="files" id="files" multiple @change="handleFileUpload" v-validate="'ext:jpeg,jpg,png|size:1500'" accept="image/jpeg, image/png, image/jpg," :disabled="active">
                             <br />
                             
                         </span>
@@ -37,18 +40,16 @@
 
                     </div>
 
-                    <div class="modal-footer" style="display: flex; justify-content: space-between;">
-                        <!-- <button type="reset" class="btn btn-secondary fechar" data-dismiss="modal">Resetar</button> -->
-                        
-                        <button type="submit" class="btn btn-primary entrar">Salvar</button>
-                    </div>
+                   
 
                     <div class="container">
                         <div class="row">
-
-                          <!--  <output id="Filelist" >
+                          
+                           
+                            <!--
+                            <output id="Filelist" >
                                 <ul class="thumb-Images">
-                                    <li v-for="(url, index) in attachments" :key="url.id">
+                                    <li v-for="(url, index) in files" :key="url.id">
                                         <div class="img-wrap"> 
                                             <span class="close" style="position: absolute" @click="removeImg(index)">&times;</span>
                                             <img class="thumb" :src="url" title="" data-id="i.id"/>
@@ -59,6 +60,12 @@
                             </output> -->
 
                         </div>
+                    </div>
+                    
+                     <div class="modal-footer" style="display: flex; justify-content: space-between;">
+                        <!-- <button type="reset" class="btn btn-secondary fechar" data-dismiss="modal">Resetar</button> -->
+                        
+                        <button type="submit" class="btn btn-primary entrar">Salvar</button>
                     </div>
 
 
@@ -73,40 +80,47 @@
 
 
 <script>
-    import ax from "../api.js";
+    import ax from "../api.js"
     import $ from "jquery"
+    //import UpImage from '@/components/UpImage.vue'
+    
     export default {
         name: "AddImage",
         
         data(){
             return{
                 // You can store all your files here
-                attachments: [],
+                //attachments: [],
                 // Each file will need to be sent as FormData element
                 data: new FormData(),
-                
-                
                 percentCompleted: 0, // You can store upload progress 0-100 in value, and show it on the screen
                 
                 filelen: 0,
-                urls: [],
+                index: 0,
+                total: 0,
+                files: {},
+                image: {}
 
             }
         },
         computed:{
             active: function(){
-                if(this.filelen + this.attachments>=15){
-                    this.$noty.warning("O numero de arquivo pasou dos 15 permitidos");
+                if(this.filelen + this.files>=15){
+                    this.$noty.warning("O numero de arquivos passou dos 15 permitidos");
                     return true;
                 }else{
                     return false;
                 }
             }
         },
+        components:{
+            //UpImage,
+        },
         
         methods:{
+             
             handleFileUpload: function(ev){
-                this.attachments = ev.target.files
+                this.files = ev.target.files
                 //var self = this;
                /* var files = ev.target.files;
                     for(let i = 0; i < files.length; i++) {
@@ -120,65 +134,23 @@
                 //console.log(self.attachments);
                
             },
+          
             
             getCount(){
                  ax.get("img/" + this.$route.params.id + "/count/").then(response =>{this.filelen=response.data.imagelen})
             },
             
-            CheckFileType(fileType) {
-                if (fileType == "image/jpeg") {
-                    return true;
-                } else if (fileType == "image/png") {
-                    return true;
-                } else if (fileType == "image/jpg") {
-                    return true;
-                } else {
-                    //console.log(fileType);
-                    return false;
-                }
-                
-            },
-            CheckFileSize(fileSize) {
-                if (fileSize < 500000) {
-                    return true;
-                } else {
-                    return false;
-                }
-                //return true;
-            },
             
-            //To check files count according to upload conditions
-            CheckFilesCount(AttachmentArray) {
-                //Since AttachmentArray.length return the next available index in the array, 
-                //I have used the loop to get the real length
-                var len = 0;
-                for (var i = 0; i < AttachmentArray.length; i++) {
-                    if (AttachmentArray[i] !== undefined) {
-                        len++;
-                    }
-                }
-                //To check the length does not exceed 10 files maximum
-                if (len > 24) {
-                    return false;
-                } else {
-                    return true;
-                }
-            },
-            removeImg: function(im){
-                this.attachments.splice(im,1);
-                //console.log(this.attachments);
-                //console.log("removed: "+im);
-            },
             
             addData(){
                 
-                if($.isEmptyObject(this.attachments)){
+                if($.isEmptyObject(this.files)){
                     this.$noty.error("Selecione as fotos!");
                 }else{
                     var formData = new FormData(); 
                     
-                    for(var i = 0; i < this.attachments.length; i++ ){
-                        let file = this.attachments[i];
+                    for(var i = 0; i < this.files.length; i++ ){
+                        let file = this.files[i];
                         //console.log(file);
                         formData.append('file[' + i + ']', file);
                     }
@@ -206,8 +178,7 @@
                 }
             },
             
-            
-            
+          
         },
         
         created() {
@@ -225,3 +196,60 @@
     
     
 </script>
+
+
+<style scoped>
+     .vue_component__upload--image{
+        padding: 5px;
+        cursor: pointer;
+        min-height: 80px;
+        border-radius: 5px;
+    }
+    .upload_image_form__thumbnails{
+        margin-bottom: 1em;
+    }
+     .upload_image_form__thumbnail{
+        border-radius: 2.5px;
+        position:relative;
+        width:20%;
+        padding:20% 0 0;
+        overflow: hidden;
+        margin:10px;
+        display:inline-block;
+    }
+
+     .upload_image_form__thumbnail img{
+        position: absolute;
+        top:50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        max-height: 150%;
+        opacity: 0;
+        transform: translateX(-50%) translateY(-50%);
+        transition: 1s opacity;
+    }
+    .upload_image_form__thumbnail img.show{
+        opacity: 1;
+    }
+     .upload_image_form__thumbnail img:hover{
+        filter: blur(2px);
+    }
+     .upload_image_form__thumbnail.bad-size img{
+        filter: grayscale(100%);
+    }
+    .vue_component__upload--image .upload_image_form__thumbnail.uploaded img{
+        opacity: 0.1;
+    }
+     .upload_image_form__thumbnail span{
+        position: absolute;
+        top: -5px;
+        left: 0px;
+        z-index: 100;
+        padding: 0px 1px;
+        border-radius: 2px;
+        background-color: grey;
+    }
+    
+
+</style>

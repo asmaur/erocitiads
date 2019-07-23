@@ -15,7 +15,7 @@
                             </label>
                             <ul>
                                 <li>arquivos aceitos (jpg, png, jpeg)</li>
-                                <li>Numero maximo de arquivos de 15 com 3MB cada</li>
+                                <li>Numero máximo de arquivos de 15 com 1MB cada</li>
                             </ul>
                         </div>
                     </fieldset>

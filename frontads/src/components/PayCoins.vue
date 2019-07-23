@@ -7,7 +7,11 @@
         </div>
 
         <div class="card-body">
-            <p>Compra mínima de R$59.90</p>
+            <ul class="text-left">
+                <li>Compra mínima de <strong>R$59.90</strong> </li>
+               <!-- <li>Na janela do Pagseguro, <strong>Favor usar o email da sua conta.</strong> </li> -->
+                
+            </ul>
             <div class="input-group">
                 <input type="number" v-validate="{decimal:4, min_value:59.90, required:true}" min="59.90" step="10.0" class="form-control" name="coin" v-model="coin" aria-label="Amount (to the nearest dollar)" required>
                 <div class="input-group-append">
@@ -43,6 +47,8 @@
             return {
                 coin: null,
                 transaction: {},
+                agente: {},
+                user: {},
             }
         },
         computed: {
@@ -131,7 +137,8 @@
 
                             /* Redireciona o comprador, caso o navegador não tenha suporte ao Lightbox */
                             if (!isOpenLightbox) {
-                                location.href = "https://sandbox.pagseguro.uol.com.br/v2/checkout/payment.html?code=" + checkoutCode;
+                                //location.href = "https://sandbox.pagseguro.uol.com.br/v2/checkout/payment.html?code=" + checkoutCode;
+                                location.href = "https://pagseguro.uol.com.br/v2/checkout/payment.html?code=" + checkoutCode;
                             }
 
 

@@ -1,24 +1,31 @@
 {% load render_bundle from webpack_loader %}
+{%load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-    <meta property='og:title' content='title' />
-    <meta property='og:image' content='image/path' />
-    <meta property='og:description' content='description' />
-    <meta property='og:url' content='your url' />
+    <meta property='description' content='Crie e compartilhe seus anúncios. Conhece a melhor plataforma para divulgar seus serviços e conquistar o seu público.' />
+    <meta name="keywords" content="Acompanhantes Brasil, Acompanhantes no Brasil, Acompanhante Brasil, Garota de Programa Brasil, Garotas de Programa Brasil, Acompanhante Brasil, Acompanhantes Br, Acompanhantes Br, Guia Erótico Brasil, Guia de Acompanhantes Brasil, Anúncios de Acompanhantes Brasil, Acompanhantes Br, Acompanhante, Acompanhantes Porto Alegre, Acompanhantes em Porto Alegre, Acompanhante em Porto Alegre, Garota de Programa Porto Alegre, Garotas de Programa Porto Alegre, Acompanhante Porto Alegre, Acompanhantes Florianópolis, Acompanhantes em Florianópolis, Acompanhante em Florianópolis, Garota de Programa Florianópolis, Garotas de Programa Florianópolis, Acompanhante Florianópolis, Acompanhantes Floripa, Acompanhantes São Paulo, Acompanhantes em São Paulo, Acompanhante em São Paulo, Garota de Programa São Paulo, Garotas de Programa São Paulo, Acompanhante São Paulo, Acompanhantes SP, Acompanhantes Rio de Janeiro, Acompanhantes em Rio de Janeiro, Acompanhante em Rio de Janeiro, Garota de Programa Rio de Janeiro, Garotas de Programa Rio de Janeiro, Acompanhante Rio de Janeiro, Acompanhantes RJ, Acompanhantes Belo Horizonte, Acompanhantes em Belo Horizonte, Acompanhante em Belo Horizonte, Garota de Programa Belo Horizonte, Garotas de Programa Belo Horizonte, Acompanhante Belo Horizonte, Acompanhantes BH, Acompanhantes Minas Gerais, Acompanhantes MG, Acompanhantes Curitiba, Acompanhantes em Curitiba, Acompanhante em Curitiba, Garota de Programa Curitiba, Garotas de Programa Curitiba, Acompanhante Curitiba, Acompanhantes PR, Acompanhantes Paraná, Acompanhantes Brasília, Acompanhantes em Brasília, Acompanhante em Brasília, Garota de Programa Brasília, Garotas de Programa Brasília, Acompanhante Brasília, Acompanhantes GO, Acompanhantes Goiás, Acompanhantes Salvador, Acompanhantes em Salvador, Acompanhante em Salvador, Garota de Programa Salvador, Garotas de Programa Salvador, Acompanhante Salvador, Acompanhantes BA, Acompanhantes Bahia, Acompanhantes Fortaleza, Acompanhantes em Fortaleza, Acompanhante em Fortaleza, Garota de Programa Fortaleza, Garotas de Programa Fortaleza, Acompanhante Fortaleza, Acompanhantes CE, Acompanhantes Ceará,">
+    
+    <meta name="author" content="Maurice AINON, am.amauri@outlook.com">
+    
+    <meta property='og:title' content='EroCiti ads :: Assessoria e Marketing Pessoal' />
+    <meta property='og:image' content="{% static "img/128lg.png" %}" />
+    <meta property='og:description' content='Crie e compartilhe seus anúncios. Conhece a melhor plataforma para divulgar seus serviços e conquistar o seu público.' />
+    <meta property='og:url' content='https://ads.erociti.com' />
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
     
+<!--
+<script type="text/javascript" src="https://stc.sandbox.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js">
+</script> -->
+   
+   <!--Para integração em ambiente de produção use este link -->
+    <script type="text/javascript" src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js"> </script>
     
-<script type="text/javascript"
-src="https://stc.sandbox.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js">
-</script>
-    
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="icon" href="{% static "img/favicon.ico" %}">
     <title>EroCiti ads :: Assessoria e Marketing Pessoal</title>
     
   </head>

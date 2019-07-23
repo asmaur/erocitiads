@@ -349,7 +349,7 @@
 
     -->
 
-        <div id="partners">
+     <!--   <div id="partners">
 
             <div class="container">
                 <div class="row">
@@ -364,18 +364,6 @@
                     <a href="" class="order-2 p-4 wb-patners m-3 mx-auto">
                         <img src="../assets/img/logo-one.png" alt="" class="img-fluid">
                     </a>
-
-                    <!--
-                <div class="order-2 p-4 wb-patners m-3 mx-auto"> <img src="img/logo-two.png" alt="" class="img-fluid wb-btm-img animated fadeInUp wow animated" data-wow-duration="1500ms" data-wow-delay="400ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 400ms; animation-name: fadeInUp;"> </div>
-                <div class="order-2 p-4 wb-patners m-3 mx-auto"> <img src="img/logo-three.png" alt="" class="img-fluid wb-btm-img animated fadeInUp wow animated" data-wow-duration="1500ms" data-wow-delay="400ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 400ms; animation-name: fadeInUp;"> </div>
-                <div class="order-2 p-4 wb-patners m-3 mx-auto"> <img src="img/logo-four.png" alt="" class="img-fluid wb-btm-img animated fadeInUp wow animated" data-wow-duration="1500ms" data-wow-delay="400ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 400ms; animation-name: fadeInUp;"> </div>
-                <div class="order-2 p-4 wb-patners m-3 mx-auto"> <img src="img/logo-five.png" alt="" class="img-fluid wb-btm-img animated fadeInUp wow animated" data-wow-duration="1500ms" data-wow-delay="400ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 400ms; animation-name: fadeInUp;"> </div>
-                <div class="order-2 p-4 wb-patners m-3 mx-auto"> <img src="img/logo-six.png" alt="" class="img-fluid wb-btm-img animated fadeInUp wow animated" data-wow-duration="1500ms" data-wow-delay="400ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 400ms; animation-name: fadeInUp;"> </div>
-                <div class="order-2 p-4 wb-patners m-3 mx-auto"> <img src="img/logo-seven.png" alt="" class="img-fluid wb-btm-img animated fadeInUp wow animated" data-wow-duration="1500ms" data-wow-delay="400ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 400ms; animation-name: fadeInUp;"> </div>
-                <div class="order-2 p-4 wb-patners m-3 mx-auto"> <img src="img/logo-eight.png" alt="" class="img-fluid wb-btm-img animated fadeInUp wow animated" data-wow-duration="1500ms" data-wow-delay="400ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 400ms; animation-name: fadeInUp;"> </div>
-                <div class="order-2 p-4 wb-patners m-3 mx-auto"> <img src="img/logo-nine.png" alt="" class="img-fluid wb-btm-img animated fadeInUp wow animated" data-wow-duration="1500ms" data-wow-delay="400ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 400ms; animation-name: fadeInUp;"> </div>
-                <div class="order-2 p-4 wb-patners m-3 mx-auto"> <img src="img/logo-ten.png" alt="" class="img-fluid wb-btm-img animated fadeInUp wow animated" data-wow-duration="1500ms" data-wow-delay="400ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 400ms; animation-name: fadeInUp;"> </div>
-                -->
                 </div>
             </div>
 
@@ -396,7 +384,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
 

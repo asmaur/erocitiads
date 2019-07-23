@@ -68,7 +68,10 @@ Vue.use(VueAnalytics, {
   id: 'UA-143260985-1'
 })
  
-
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
+NProgress.configure({ minimum: 0.5, easing: 'ease', speed: 5000, showSpinner: true, trickle: false, trickleRate: 0.02, trickleSpeed: 800 });
+Vue.use(NProgress)
 
 
 Vue.config.productionTip = true
