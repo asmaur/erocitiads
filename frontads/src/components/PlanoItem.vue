@@ -11,13 +11,7 @@
             </div>
 
             <div class="card-body card-list">
-                <ul>
-                    <li>kjshjd kjasgdjkgs</li>
-                    <li>kjasgdjkgs</li>
-                    <li>kjasgdjkgs</li>
-                    <li>kjasgdjkgs</li>
-                    <li>kjasgdjkgs</li>
-                </ul>
+            <p></p>
 
                 <p>
                     <small>Esse plano é valido por 7 dias.</small>

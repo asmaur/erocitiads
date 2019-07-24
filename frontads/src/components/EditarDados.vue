@@ -29,12 +29,13 @@
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
                                                 <label for="twitter">Conta twitter</label>
-                                                <input type="text" class="form-control" id="twitter" name="twitter" regrex="([a-zA-Z0-9_]+)" v-model="twitter" placeholder="Nome de usuário do twitter">
+                                                <input type="text" class="form-control" id="twitter" name="twitter" v-model="twitter" placeholder="Nome de usuário do twitter">
+                                           
                                             </div>
 
                                             <div class="form-group col-md-6">
                                                 <label for="instagram">Conta instagram</label>
-                                                <input type="text" class="form-control" id="instagram" v-model="instagram" regrex="([a-zA-Z0-9_]+)" placeholder="Nome de usário do instagram">
+                                                <input type="text" class="form-control" id="instagram" v-model="instagram" placeholder="Nome de usário do instagram">
                                             </div>
                                         </div>
 
@@ -49,8 +50,9 @@
                                                 <label for="cabelo">Cabelos</label>
                                                 <select class="form-control" id="cabelo" v-model="cabelo" name="cabelo" required>
                                                     <option value="Loira">Loiras</option>
-                                                    <option value="Preta">Pretas</option>
+                                                    <option value="Morena">Morenas</option>
                                                     <option value="Ruiva">Ruivas</option>
+                                                    <option value="Cacheada">Cacheadas</option>
                                                 </select>
                                             </div>
 
@@ -59,6 +61,7 @@
                                                 <select class="form-control" id="etnia" name="etnia" v-model="etnia" required>
                                                     <option value="Branca">Brancas</option>
                                                     <option value="Preta">Pretas</option>
+                                                    <option value="Negra">Negras</option>
                                                     <option value="Morena">Morenas</option>
                                                     <option value="oriental">Orientais</option>
                                                 </select>
@@ -71,7 +74,9 @@
                                                     <option value="Naturais Pequenos">Naturais Pequenos</option>
                                                     <option value="Naturais Médios">Naturais Médios</option>
                                                     <option value="Naturais Grandes">Naturais Grandes</option>
-                                                    <option value="Peitudas">Peitudas</option>
+                                                    <option value="Siliconada">Siliconada</option>
+                                                    <option value="Operada">Operada</option>
+                                                    
                                                 </select>
                                             </div>
 
@@ -80,7 +85,9 @@
                                                 <select class="form-control" id="tipo" name="tipo" v-model="tipo" required>
                                                     <option value="Magra">Magra</option>
                                                     <option value="Mignon">Mignon</option>
-                                                    <option value="Gordinha">Gordinha</option>
+                                                    <option value="Alta">Alta</option>
+                                                    <option value="BBW">BBW</option>
+                                                    <option value="Fitness">Fitness</option>
                                                 </select>
                                             </div>
                                             <div class="form-group col-md-3">

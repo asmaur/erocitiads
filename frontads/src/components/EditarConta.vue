@@ -21,7 +21,7 @@
         <div class="modal-dialog modal-lg" tabindex="-1" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">DADOS DA CONTA {{us_pk}}</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">DADOS DA CONTA</h5>
                     <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button> -->
@@ -99,10 +99,10 @@
                                     <span class="alert-danger">{{ errors.first('telefone') }}</span>
                                 </div>
                                 
-                                <div class="form-group col-md-4">
+                              <!--  <div class="form-group col-md-4">
                                     <label for="cpf">CPF</label>
                                     <input type="tel" class="form-control" id="cpf" v-model="cpf" placeholder="Entre seu CPF" name="cpf" v-mask="'###.###.###-##'" required>
-                                </div>
+                                </div> -->
 
 
                             </div>
@@ -154,7 +154,7 @@
                 /*agente */
                 code_area: null,
                 phone: null,
-                cpf: null,
+                //cpf: null,
                 /* user */
                 username: null,
                 first_name: null,
@@ -181,7 +181,7 @@
                     .then(response => [
                         this.code_area = response.data.agente.code_area,
                         this.phone = response.data.agente.phone,
-                        this.cpf = response.data.agente.cpf,
+                        //this.cpf = response.data.agente.cpf,
                         this.ag_pk = response.data.agente.id,
                         this.state = response.data.agente.state,
                         this.city = response.data.agente.city,
@@ -201,7 +201,7 @@
                         /* ag */
                         this.old.code_area = response.data.agente.code_area,
                         this.old.phone = response.data.agente.phone,
-                        this.old.cpf = response.data.agente.cpf,
+                        //this.old.cpf = response.data.agente.cpf,
                     ])
             },
             updateUser() {
@@ -274,7 +274,7 @@
                     delete this.datum.phone
                 }
             },
-            cpf: function(ero3) {
+            /*cpf: function(ero3) {
                 if (this.old.cpf != ero3) {
                     if (ero3 != "") {
                         this.datum.cpf = ero3
@@ -282,7 +282,7 @@
                 } else {
                     delete this.datum.cpf
                 }
-            },
+            },*/
 
 
             first_name: function(ero5) {

@@ -2,7 +2,7 @@
     <div class="col-md-4">
         <div class="card">
             <div class="card-header">
-                <h3>VIP {{pk}}</h3>
+                <h3>VIP</h3>
                 <!--<div class="price">
                                             <span class="devise-symbol">R$</span> <span class="plan-amount">50,00</span><span class="plan-period">/mês</span>
         </div>-->

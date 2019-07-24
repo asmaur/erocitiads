@@ -65,12 +65,12 @@
                                         Entre um email valido.
                                     </div>
                                 </div>
-                                <div class="form-group col-md-6" v-if="users.agente">
+                               <!-- <div class="form-group col-md-6" v-if="users.agente">
                                     <label for="email_confirm">CPF</label>
                                     <input type="email" class="form-control" id="email_confirm" :value="users.agente.cpf" placeholder="Entre seu CPF" name="email_confirm" required>
                                 </div>
 
-                                <!-- <div class="form-group col-md-6">
+                                 <div class="form-group col-md-6">
                                 <label for="senha">Senha</label>
                                 <input type="password" class="form-control" id="senha" name="senha" placeholder="Entre sua senha" required>
                             </div>

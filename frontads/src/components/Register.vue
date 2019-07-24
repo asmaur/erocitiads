@@ -85,10 +85,10 @@
                             </div>
 
                             <div class="form-row">
-                                <div class="form-group col-md-4">
+                               <!-- <div class="form-group col-md-4">
                                     <label for="cpf">CPF</label>
                                     <input type="tel" class="form-control" id="cpf" v-model="cpf" placeholder="Entre seu CPF" name="cpf" v-mask="'###.###.###-##'" required>
-                                </div>
+                                </div> -->
                                 <div class="form-group col-md-3">
                                     <label for="code_area">Codigo de área</label>
                                     <input type="tel" class="form-control" id="code_area" maxlength="2" v-model="code_area" v-mask="'##'" placeholder="Entre seu DDD" name="code_area" pattern="^\d{2}$" required>
@@ -160,7 +160,7 @@
                 cityName: null,
                 code_area: null,
                 phone: null,
-                cpf: null,
+                //cpf: null,
                 aceito: null,
                 /* user */
                 username: null,
@@ -281,13 +281,13 @@
                     delete this.datus.phone;
                 }
             },
-            cpf: function(ero8) {
+            /*cpf: function(ero8) {
                 if (ero8 != "") {
                     this.datus.cpf = ero8;
                 } else {
                     delete this.datus.cpf;
                 }
-            },
+            },*/
             email: function(ero9) {
                 if (ero9 != "") {
                     this.datus.email = ero9;

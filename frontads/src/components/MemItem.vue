@@ -11,13 +11,7 @@
             </div>
 
             <div class="card-body card-list">
-                <ul>
-                    <li>kjshjd kjasgdjkgs</li>
-                    <li> kjasgdjkgs </li>
-                    <li>kjasgdjkgs</li>
-                    <li>kjasgdjkgs</li>
-                    <li>kjasgdjkgs</li>
-                </ul>
+                <ul type="1" v-html="plano.beneficios"></ul>
 
 
                 <p> <small>Esse plano é valido por {{plano.valide_time}} dias.</small> </p>

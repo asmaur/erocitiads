@@ -5,8 +5,7 @@
         </div>
         
         <my-subs v-for="plano in planos" :key="plano.id" :plano="plano"/>
-        
-        
+    
     </div>
 </template>
 

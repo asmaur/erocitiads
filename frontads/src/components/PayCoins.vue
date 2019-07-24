@@ -80,7 +80,7 @@
                     senderAreaCode: this.agente.code_area,
                     senderPhone: this.agente.phone, //999999999
                     senderEmail: this.user.email, //comprador@uol.com.br 
-                    senderCpf: this.agente.cpf,
+                    //senderCpf: this.agente.cpf,
                     shippingAddressRequired: false,
 
                 }

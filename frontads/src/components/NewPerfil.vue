@@ -107,7 +107,7 @@
 
                             <div class="form-row">
 
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-8">
                                     <label style="font-size: 14px;">
                                         <span style='color:navy;font-weight:bold'>Instrução :</span>
                                     </label>
@@ -123,8 +123,8 @@
 
                                     <div class="custom-file col-md-12">
                                         <label class="custom-file-label" for="customFile" v-if="file">{{file.name}}</label>
-                                        <label class="custom-file-label" for="customFile" v-else>Escolha a foto de capa (máximo de 1MB)</label>
-                                        <input type="file" class="custom-file-input" ref="capa" v-validate="'ext:jpeg,jpg,png|size:1500|required'" data-vv-as="capa" id="capa" name="capa" @change="handleFileChange" required>
+                                        <label class="custom-file-label" for="customFile" v-else>Escolha a foto de capa (máximo de 3MB)</label>
+                                        <input type="file" class="custom-file-input" ref="capa" v-validate="'ext:jpeg,jpg,png|size:3500|required'" data-vv-as="capa" id="capa" name="capa" @change="handleFileChange" required>
                                         <span v-if="file">{{file.name}}</span>
                                         <br>
                                         <span class="alert-danger" v-for="error in errors.collect('capa')" :key="error.index">{{ error }}</span>
