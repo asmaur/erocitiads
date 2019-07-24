@@ -38,7 +38,7 @@
 
                     <li> <router-link to="/politica-de-privacidade"> Política de privacidade </router-link> </li>
                     <li> <router-link to="/termo-de-uso" >Termo &amp; Condições de Uso</router-link> </li>
-                    <li> <a href="https://erociti.com">Ir Para erociti.com</a> </li>
+                    <li> <a href="https://erociti.com" target="_blank">Ir Para erociti.com</a> </li>
                 </ul>
                 <div class="copy-text">
                     EroCiti Group. &copy; {{ano}} | Todos os direitos reservados. </div>
