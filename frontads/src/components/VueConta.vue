@@ -128,7 +128,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary mr-auto entrar" data-dismiss="modal">FECHAR</button>
-                            <button type="button" class="btn btn-primary fechar" @click="deleteProfile(users.id)">DELETAR</button>
+                            <button type="button" class="btn btn-primary fechar" @click="deleteConta(users.id)">DELETAR</button>
                         </div>
                     </div>
                 </div>
