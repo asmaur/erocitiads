@@ -25,7 +25,7 @@
 
 
                         <em>Categoria: {{per.category}}</em> <br>
-                        <em>Age: {{per.idade}} anos</em>
+                        <em>Idade: {{per.idade}} anos</em>
                         <br>
                         <em>Disponível para: <em v-show="dados.men"> Homens,</em> <em v-show="dados.women"> Mulheres,</em> <em v-show="dados.couple">Casais</em></em> <br>
 

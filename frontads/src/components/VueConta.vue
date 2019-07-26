@@ -117,7 +117,7 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">DELETAR O CONTA</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">DELETAR O CONTA {{users.id}}</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -128,7 +128,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary mr-auto fechar" data-dismiss="modal">FECHAR</button>
-                            <button type="button" class="btn btn-primary entrar" @click="deleteProfile(per.pk)">DELETAR PERFIL</button>
+                            <button type="button" class="btn btn-primary entrar" @click="deleteProfile(users.id)">DELETAR</button>
                         </div>
                     </div>
                 </div>
