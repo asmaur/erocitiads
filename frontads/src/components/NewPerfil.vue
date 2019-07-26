@@ -57,7 +57,10 @@
                                     <select class="form-control" id="tipo" name="tipo" v-model="tipo" required>
                                         <option value="Magra">Magra</option>
                                         <option value="Mignon">Mignon</option>
-                                        <option value="Gordinha">Gordinha</option>
+                                        <option value="Alta">Alta</option>
+                                        <option value="BBW">BBW</option>
+                                        <option value="Fitness">Fitness</option>
+
 
 
                                     </select>
@@ -241,11 +244,11 @@
                         //console.log("Cump: "+this.image.width);
 
                         if (this.image.width < MIN_WIDTH) {
-                            alert('A sua imagen: '+this.image.width+'x'+this.image.height+'px é menor que o mínimo recomendado de: '+MIN_WIDTH+'x'+MIN_HEIGHT+'px');
+                            alert('A sua imagen: ' + this.image.width + 'x' + this.image.height + 'px é menor que o mínimo recomendado de: ' + MIN_WIDTH + 'x' + MIN_HEIGHT + 'px');
                             return;
                         }
                         if (this.image.height < MIN_HEIGHT) {
-                            alert('A sua imagen: '+this.image.width+'x'+this.image.height+'px é menor que o mínimo recomendado de: '+MIN_WIDTH+'x'+MIN_HEIGHT+'px');
+                            alert('A sua imagen: ' + this.image.width + 'x' + this.image.height + 'px é menor que o mínimo recomendado de: ' + MIN_WIDTH + 'x' + MIN_HEIGHT + 'px');
                             return;
                         }
                     }
