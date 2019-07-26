@@ -117,7 +117,7 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">DELETAR O CONTA {{users.id}}</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">DELETAR O CONTA </h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -127,8 +127,8 @@
                             <p>Ao deletar o conta, não será possível restaurar ou recuperar os dados relativos a esta conta.</p>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary mr-auto fechar" data-dismiss="modal">FECHAR</button>
-                            <button type="button" class="btn btn-primary entrar" @click="deleteProfile(users.id)">DELETAR</button>
+                            <button type="button" class="btn btn-secondary mr-auto entrar" data-dismiss="modal">FECHAR</button>
+                            <button type="button" class="btn btn-primary fechar" @click="deleteProfile(users.id)">DELETAR</button>
                         </div>
                     </div>
                 </div>
