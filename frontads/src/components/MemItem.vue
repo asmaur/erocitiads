@@ -4,7 +4,7 @@
 
         <div class="card">
             <div class="card-header">
-                <h3>{{plano.membership_type}} </h3>
+                <h3>{{plano.name}} </h3>
                 <div class="price">
                     <span class="devise-symbol">R$</span> <span class="plan-amount">{{plano.price}}</span><span class="plan-period">/{{plano.valide_time}} dias</span>
                 </div>

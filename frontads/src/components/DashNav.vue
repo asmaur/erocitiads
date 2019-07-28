@@ -51,7 +51,7 @@
 
         data() {
             return {
-                pk: null,
+                //pk: null,
                 user: {},
                 agente: {},
             }

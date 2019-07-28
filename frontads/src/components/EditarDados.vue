@@ -29,13 +29,13 @@
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
                                                 <label for="twitter">Conta twitter</label>
-                                                <input type="text" class="form-control" id="twitter" name="twitter" v-model="twitter" placeholder="Nome de usuário do twitter">
+                                                <input type="text" class="form-control" id="twitter" name="twitter" v-model="twitter" placeholder="@nome_do_usuario" pattern="(?:@)([A-Za-z0-9_](?:(?:[A-Za-z0-9_]|(?:\.(?!\.))){0,28}(?:[A-Za-z0-9_]))?)">
                                            
                                             </div>
 
                                             <div class="form-group col-md-6">
                                                 <label for="instagram">Conta instagram</label>
-                                                <input type="text" class="form-control" id="instagram" v-model="instagram" placeholder="Nome de usário do instagram">
+                                                <input type="text" class="form-control" id="instagram" v-model="instagram" placeholder="@nome_de_usuario" pattern="(?:@)([A-Za-z0-9_](?:(?:[A-Za-z0-9_]|(?:\.(?!\.))){0,28}(?:[A-Za-z0-9_]))?)">
                                             </div>
                                         </div>
 
@@ -209,7 +209,7 @@
 
                     //console.log(JSON.stringify(this.datus));
 
-                    ax.put("dados/" + this.$route.params.id + "/", JSON.stringify(this.datus))
+                    ax.put("dados/" + this.$route.params.id + "/", {'datus': JSON.stringify(this.datus)})
                         .then(response => {
                                 this.$noty.success(response.data.message)
                                     //console.log(response.data)
@@ -232,7 +232,7 @@
                 twitter: function(ero1) {
 
                     if (this.old_val.twitter != ero1) {
-                        this.datus.twitter = ero1;
+                        this.datus.twitter = ero1; //.replace(/@/, '');
                     } else {
                         delete this.datus.twitter;
                     }
@@ -242,7 +242,7 @@
                 instagram: function(ero2) {
                     if (this.old_val.instagram != ero2) {
                         //delete this.datus.instagram;
-                        this.datus.instagram = ero2;
+                        this.datus.instagram = ero2; // .replace(/@/, '');
                     } else {
                         delete this.datus.instagram;
                     }

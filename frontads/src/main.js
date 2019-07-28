@@ -41,40 +41,40 @@ import 'vuejs-noty/dist/vuejs-noty.css'
 
 
 
-import VueNoty from 'vuejs-noty'
+import VueNoty from 'vuejs-noty';
 
 Vue.use(VueNoty, {
     timeout: 5000, 
     progressBar: true, 
     layout: 'topRight', 
     theme: 'relax',
-})
+});
 
-import VeeValidate from 'vee-validate'
-const config = {
-    locale: 'pt_br',
-}
-Vue.use(VeeValidate, config)
 
+import VeeValidate from 'vee-validate';
+//import pt_BR from "vee-validate/dist/locale/pt_BR";
+Vue.use(VeeValidate, {locale: 'pt'});
 
 
 
-import VueTheMask from 'vue-the-mask'
-Vue.use(VueTheMask)
 
-import VueAnalytics from 'vue-analytics'
+
+import VueTheMask from 'vue-the-mask';
+Vue.use(VueTheMask);
+
+import VueAnalytics from 'vue-analytics';
 
 Vue.use(VueAnalytics, {
   id: 'UA-143260985-1'
-})
+});
  
-import NProgress from 'nprogress'
-import 'nprogress/nprogress.css'
+import NProgress from 'nprogress';
+import 'nprogress/nprogress.css';
 NProgress.configure({ minimum: 0.5, easing: 'ease', speed: 5000, showSpinner: true, trickle: false, trickleRate: 0.02, trickleSpeed: 800 });
-Vue.use(NProgress)
+Vue.use(NProgress);
 
 
-Vue.config.productionTip = true
+Vue.config.productionTip = false;
 
 new Vue({
   router,

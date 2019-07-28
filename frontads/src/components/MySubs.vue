@@ -1,9 +1,9 @@
 <template>
 
-    <div class="col-md-4">
+    <div class="col-md-4" v-if="plano">
         <div class="card">
             <div class="card-header">
-                <h3>{{plano.membership.membership_type}}</h3>
+                <h3>{{plano.membership.name}}</h3>
 
             </div>
 
