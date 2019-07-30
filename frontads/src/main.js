@@ -65,7 +65,7 @@ Vue.use(VueTheMask);
 import VueAnalytics from 'vue-analytics';
 
 Vue.use(VueAnalytics, {
-  id: 'UA-143260985-1'
+  id: 'UA-144814598-1'
 });
  
 import NProgress from 'nprogress';
@@ -82,4 +82,3 @@ new Vue({
   
   render: h => h(App)
 }).$mount('#app')
-
