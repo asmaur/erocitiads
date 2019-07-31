@@ -62,11 +62,11 @@ Vue.use(VeeValidate, {locale: 'pt'});
 import VueTheMask from 'vue-the-mask';
 Vue.use(VueTheMask);
 
-import VueAnalytics from 'vue-analytics';
+//import VueAnalytics from 'vue-analytics';
 
-Vue.use(VueAnalytics, {
-  id: 'UA-144814598-1'
-});
+//Vue.use(VueAnalytics, {
+ // id: 'UA-144814598-1'
+//});
  
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';

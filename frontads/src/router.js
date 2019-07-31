@@ -5,6 +5,8 @@ import Home from './views/Home.vue'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 
+import VueAnalytics from 'vue-analytics';
+
 Vue.use(Router)
 
 var isAuthenticated = function(){
@@ -241,6 +243,13 @@ router.beforeResolve((to, from, next) => {
 
 router.afterEach(() => {
   NProgress.done(true)
+});
+
+Vue.use(VueAnalytics, {
+    // this one of course needs to me a real domain ID
+    id: 'UA-144814598-1',
+   // use the `router` instance here
+    router
 });
 
 export default router;
