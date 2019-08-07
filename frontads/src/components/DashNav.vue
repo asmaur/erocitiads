@@ -4,7 +4,7 @@
         <nav class="navbar navbar-expand-lg wiz-dash-nav">
 
             <router-link class="navbar-brand" :to="'/dash/'+agente.id+'/'">
-                EroCiti ads
+                <i class="fas fa-home fa-x"></i> INÍCIO<!-- EroCiti ads -->
             </router-link>
             <button class="navbar-toggler wiz-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -14,7 +14,7 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <button class="nav-link btn btn-outline-warning" data-toggle="modal" data-target="#criar-perfil">
-                            <i class="fa fa-plus"></i> perfil
+                            <i class="fa fa-plus"></i>  ANÚNCIOS <!--perfil -->
                         </button>
                     </li>
 

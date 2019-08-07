@@ -2,7 +2,7 @@
     <div class="card">
         <div class="card-header" id="headingTwo">
             <h5 class="mb-0">
-                <button class="btn btn-link btn-block collapsed" type="button" data-toggle="collapse" data-target="#collapseE" aria-expanded="false" aria-controls="collapseE">Especialidades</button>
+                <button class="btn btn-link btn-block collapsed" type="button" data-toggle="collapse" data-target="#collapseE" aria-expanded="false" aria-controls="collapseE" style="color:#000; font-weight: 600; font-size: 1.2rem;">Especialidades</button>
             </h5>
         </div>
         <div id="collapseE" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">

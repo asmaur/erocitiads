@@ -47,7 +47,7 @@
                     <a class="nav-link page-scroll" href="#partners">Parcerias</a>
                 </li> -->
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#contact">Contato</a>
+                    <router-link class="nav-link page-scroll" to="secoes" target="_blank">Seções</router-link>
                 </li>
             </ul>
 

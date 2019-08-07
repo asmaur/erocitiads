@@ -104,7 +104,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary mr-auto fechar" data-toggle="modal" data-target="#deletar-perfil">Deletar Conta</button>
-                    <router-link :to="'/users/e/account/2/'" type="reset" class="btn btn-secondary entrar">Editar</router-link>
+                    <router-link :to="'/users/e/account/2/'" type="reset" class="btn btn-secondary entrar" style="border-color:transparent;">Editar</router-link>
 
                 </div>
             </div>

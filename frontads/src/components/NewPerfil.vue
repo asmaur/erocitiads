@@ -5,7 +5,7 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">CRIAR PERFIL</h5>
+                    <h5 class="modal-title" id="exampleModalLabel"> CRIAR ANÚNCIO   <!-- CRIAR PERFIL --> </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -29,11 +29,11 @@
                                 </div>
 
                                 <div class="form-group col-md-6">
-                                    <label for="nome" class="col-form-label">Nome do perfil</label>
+                                    <label for="nome" class="col-form-label">Nome no anúncio</label>
                                     <input type="text" class="form-control" id="nome" name="nome" v-model="nome" placeholder="Entre o nome do perfil" required>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="sobrenome" class="col-form-label">Sobrenome do perfil</label>
+                                    <label for="sobrenome" class="col-form-label">Sobrenome no anúncio</label>
                                     <input type="text" class="form-control" id="sobrenome" name="sobrenome" v-model="sobrenome" placeholder="Entre o sobrenome do perfil" required>
                                 </div>
 
@@ -142,12 +142,15 @@
                             <div class="form-group">
                                 <label for="message-text" class="col-form-label">Descrição:</label>
                                 <textarea class="form-control" id="note" required v-model="description" placeholder="Descrição com no máximo 500 palavras" maxlength="500" onkeyup="$(this).height(15);$(this).height($(this).prop('scrollHeight'))"></textarea>
+                                
+                                <p> <strong>**Ao criar seu anúncio, entre na aba "planos". <br> Ative seu plano e disponibilize seu anuncio para o Brasil todo. </strong> </p>
+                                
                             </div>
 
                         </div>
                         <div class="modal-footer">
                             <button type="reset" class="btn btn-secondary mr-auto fechar" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary entrar">Criar perfil</button>
+                            <button type="submit" class="btn btn-primary entrar">CRIAR ANÚNCIO</button>
                         </div>
 
                     </fieldset>

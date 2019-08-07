@@ -8,6 +8,10 @@ import store from './store'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'lightgallery/dist/css/lightgallery.min.css'
 
+import 'owl.carousel/dist/assets/owl.theme.default.min.css'
+import 'owl.carousel/dist/assets/owl.carousel.min.css'
+
+
 
 
 
@@ -19,6 +23,7 @@ import 'popper.js/dist/popper.min.js'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import 'lightgallery/dist/js/lightgallery.min.js'
 import './assets/js/parallax.min.js'
+import 'owl.carousel/dist/owl.carousel.min.js'
 
 
 
@@ -72,6 +77,11 @@ import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 NProgress.configure({ minimum: 0.5, easing: 'ease', speed: 5000, showSpinner: true, trickle: false, trickleRate: 0.02, trickleSpeed: 800 });
 Vue.use(NProgress);
+
+
+import VueTour from 'vue-tour'
+require('vue-tour/dist/vue-tour.css')
+Vue.use(VueTour)
 
 
 Vue.config.productionTip = false;

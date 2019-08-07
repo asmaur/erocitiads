@@ -5,7 +5,7 @@
         <div class="card">
             <div class="card-header" id="headingOne">
                 <h5 class="mb-0">
-                    <button class="btn btn-link btn-block" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Dados do Perfil</button>
+                    <button class="btn btn-link btn-block" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color:#000; font-weight: 600; font-size: 1.2rem;">Dados do anúncio</button>
                 </h5>
             </div>
 
@@ -24,11 +24,11 @@
                                 </div>
 
                                 <div class="form-group col-md-6">
-                                    <label for="nome" class="col-form-label">Nome do Perfil</label>
+                                    <label for="nome" class="col-form-label">Nome do anúncio</label>
                                     <input type="text" class="form-control" id="nome" name="nome" :value="per.nome" placeholder="Entre um nome">
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="sobrenome" class="col-form-label">Sobrenome do Perfil</label>
+                                    <label for="sobrenome" class="col-form-label">Sobrenome do anúncio</label>
                                     <input type="text" class="form-control" id="sobrenome" name="sobrenome" :value="per.sobrenome" placeholder="Entre um sobrenome">
                                 </div>
                             </div>
@@ -107,13 +107,13 @@
                             <hr>
 
                             <div class="form-row">
-                                <div class="col-md-1">
+                                <div class="col-md-2">
 
                                     <img :src="img_url+per.capa" class="img-fluid" alt="">
 
                                     <span class="btn btn-success fileinput-button">
 
-                                        Foto de capa
+                                        Foto de capa do anúncio
                                     </span>
                                 </div>
                             </div>

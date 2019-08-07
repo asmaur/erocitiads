@@ -79,11 +79,11 @@
              <div class="container">
             <div class="row">
                 <div class="col-6">
-                    <a href="" class="btn btn-primary btn-block" id="deletar" data-toggle="modal" data-target="#deletar-perfil" style="margin-top:2rem;">Deletar perfil</a>
+                    <a href="" class="btn btn-primary btn-block" id="deletar" data-toggle="modal" data-target="#deletar-perfil" style="margin-top:2rem; border:0;">Deletar ANÚNCIO</a>
                 </div>
                 <div class="col-6">
-                    <router-link :to="'/preview/'+per.slug+'/'+per.pk+'/'" class="btn btn-primary btn-block" id="preview" style="margin-top:2rem;">
-                        Ver preview <i class="fa fa-external-link-square-alt"></i></router-link>
+                    <router-link :to="'/preview/'+per.slug+'/'+per.pk+'/'" class="btn btn-primary btn-block" id="preview" style="margin-top:2rem; border:0;">
+                      Pré-visualizar <!-- Ver preview --> <i class="fa fa-external-link-square-alt"></i></router-link>
                 </div>
 
             </div>
@@ -94,18 +94,18 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">DELETAR O PERFIL</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">DELETAR ANÚNCIO</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
-                            <h5>Tem certeza que deseja deletar esse perfil ?</h5>
-                            <p>Ao deletar o perfil, não será possível restaurar ou recuperar os dados relativos a esse perfil.</p>
+                            <h5>Tem certeza que deseja deletar este anúncio ?</h5>
+                            <p>Ao deletar o anúncio, não será possível restaurar ou recuperar os dados relativos a este anúncio.</p>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary mr-auto fechar" data-dismiss="modal">FECHAR</button>
-                            <button type="button" class="btn btn-primary entrar" @click="deleteProfile(per.pk)">DELETAR PERFIL</button>
+                            <button type="button" class="btn btn-secondary mr-auto entrar" data-dismiss="modal">FECHAR</button>
+                            <button type="button" class="btn btn-primary fechar" @click="deleteProfile(per.pk)">DELETAR ANÚNCIO</button>
                         </div>
                     </div>
                 </div>
