@@ -1,8 +1,8 @@
 <template>
     <div class="container">
         <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <h2>Ative o seu plano</h2>
+            <div class="col-md-6 offset-md-3 text-center">
+                <h2 style="text-transform: capitalize;">Ative o seu plano</h2>
             </div>
 
             <mem-item v-for="item in mem" v-bind:key="item.id" :plano="item" :pk="pk" :slug="slug" :planos="planos" />

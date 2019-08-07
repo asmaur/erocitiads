@@ -6,7 +6,7 @@
             <div class="card-header">
                 <h3>{{plano.name}} </h3>
                 <div class="price">
-                    <span class="devise-symbol">R$</span> <span class="plan-amount">{{plano.price}}</span><span class="plan-period">/{{plano.valide_time}} dias</span>
+                    <span class="devise-symbol">R$</span> <span class="plan-amount">{{formatPrice(plano.price)}}</span><span class="plan-period">/{{plano.valide_time}} dias</span>
                 </div>
             </div>
 
@@ -72,6 +72,10 @@
                     .catch(error => {
                         this.$noty.error(error.response.data.message)
                     })
+            },
+            formatPrice(value) {
+                let val = (value / 1).toFixed(2).replace('.', ',')
+                return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
             },
 
 
