@@ -30,11 +30,11 @@
 
                                 <div class="form-group col-md-6">
                                     <label for="nome" class="col-form-label">Nome no anúncio</label>
-                                    <input type="text" class="form-control" id="nome" name="nome" v-model="nome" placeholder="Entre o nome do perfil" required>
+                                    <input type="text" class="form-control" id="nome" name="nome" v-model="nome" maxlength="12" placeholder="Entre o nome do perfil" required>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="sobrenome" class="col-form-label">Sobrenome no anúncio</label>
-                                    <input type="text" class="form-control" id="sobrenome" name="sobrenome" v-model="sobrenome" placeholder="Entre o sobrenome do perfil" required>
+                                    <input type="text" class="form-control" id="sobrenome" name="sobrenome" v-model="sobrenome" maxlength="12" placeholder="Entre o sobrenome do perfil" required>
                                 </div>
 
                                 <div class="form-group col-md-6">
