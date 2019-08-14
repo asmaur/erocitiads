@@ -49,6 +49,9 @@
                 <li class="nav-item">
                     <router-link class="nav-link page-scroll" to="secoes" target="_blank">Seções</router-link>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="https://erociti.com" target="_blank">Erociti.com</a>
+                </li>
             </ul>
 
         </div>
