@@ -4,7 +4,8 @@
         <nav class="navbar navbar-expand-lg wiz-dash-nav">
 
             <router-link class="navbar-brand" :to="'/dash/'+agente.id+'/'">
-                <i class="fas fa-home fa-x"></i> INÍCIO<!-- EroCiti ads -->
+                <i class="fas fa-home fa-x"></i> INÍCIO
+                <!-- EroCiti ads -->
             </router-link>
             <button class="navbar-toggler wiz-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -12,14 +13,15 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <button class="nav-link btn btn-outline-warning" data-toggle="modal" data-target="#criar-perfil">
-                            <i class="fa fa-plus"></i>  ANÚNCIOS <!--perfil -->
-                        </button>
+                    <li class="nav-item" style="margin: 0 1px 1.2px 0;">
+                        <a class="nav-link btn btn-outline-warning" data-toggle="modal" data-target="#criar-perfil">
+                            <i class="fa fa-plus"></i> ANÚNCIO
+                            <!--perfil -->
+                        </a>
                     </li>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{user.username}}</a>
+                    <li class="nav-item dropdown" style="margin: 0 1px 1.2px 0;">
+                        <a class="nav-link btn btn-outline-warning dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{user.username}}</a>
                         <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="navbarDropdown">
 
                             <router-link class="dropdown-item" :to="'/users/coins/'+user.id+'/'">Meus Créditos</router-link>
@@ -32,6 +34,10 @@
                             <button class="dropdown-item btn" href="#" @click="logout">Sair</button>
                         </div>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-warning" href="https://erociti.com" target="_blank">VER DIVAS</a>
+                    </li>
+
                 </ul>
             </div>
         </nav>
