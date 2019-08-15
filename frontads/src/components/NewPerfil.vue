@@ -119,11 +119,11 @@
                                             arquivos aceitos (jpg, png, jpeg).
                                         </li>
                                         <li>
-                                            Tamanho recomendável de <strong>1600x900px. </strong>
+                                            Tamanho recomendável de <strong>1600x900px (comp: 1600px e alt: 900px. </strong>
                                             <br>
                                         
                                         </li>
-                                        <li>Caso a foto não estiver no tamanho recomendado, ela poderá ficar cortado ou distorcida.</li>
+                                        <li>Caso a foto não estiver no tamanho recomendado, ela poderá ficar cortada ou distorcida.</li>
                                         <li>Poderá também ser removido ou trocada pela nossa equipe.</li>
 
                                     </ul>
@@ -132,9 +132,7 @@
                                         <label class="custom-file-label" for="customFile" v-if="file">{{file.name}}</label>
                                         <label class="custom-file-label" for="customFile" v-else>Escolha a foto de capa (máximo de 3MB)</label>
                                         <input type="file" class="custom-file-input" ref="capa" v-validate="'ext:jpeg,jpg,png|size:3500|required'" data-vv-as="capa" id="capa" name="capa" @change="handleFileChange" required>
-                                        <span v-if="file">{{file.name}}</span>
-                                        <br>
-                                        <span class="alert-warning">Caso a foto não </span>
+                                        <span v-if="file">{{file.name}}</span>                                        
                                         <br>
                                         <span class="alert-danger" v-for="error in errors.collect('capa')" :key="error.index">{{ error }}</span>
 

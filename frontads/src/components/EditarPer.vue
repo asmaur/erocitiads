@@ -108,13 +108,13 @@
                                             </div>
 
                                         </div>
-                                        
+
                                         <hr>
                                         <div class="form-row">
-                                          
+
                                             <div class="form-group col-md-4 text-left">
                                                 <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="is_working" v-model="is_working" name="is_working" >
+                                                    <input type="checkbox" class="custom-control-input" id="is_working" v-model="is_working" name="is_working">
                                                     <label class="custom-control-label" for="is_working">Perfil Trabalhando</label>
                                                 </div>
                                             </div>
@@ -124,29 +124,36 @@
                                         </div>
 
                                         <hr>
-                                        
+
                                         <div class="form-row">
                                             <div class="col-md-4">
 
                                                 <img :src="per.capa" class="img-fluid" alt="">
 
-                                                
+
                                             </div>
-                                       
+
                                             <div>
                                                 <label style="font-size: 14px;">
                                                     <span style='color:navy;font-weight:bold'>Instrução :</span>
                                                 </label>
                                                 <ul>
                                                     <li>
-                                                        arquivos aceitos (jpg, png, jpeg)
+                                                        arquivos aceitos (jpg, png, jpeg).
                                                     </li>
+                                                    <li>
+                                                        Tamanho recomendável de <strong>1600x900px (comp: 1600px e alt: 900px. </strong>
+                                                        <br>
+
+                                                    </li>
+                                                    <li>Caso a foto não estiver no tamanho recomendado, ela poderá ficar cortada ou distorcida.</li>
+                                                    <li>Poderá também ser removido ou trocada pela nossa equipe.</li>
 
 
                                                 </ul>
                                                 <!--To give the control a modern look, I have applied a stylesheet in the parent span.-->
                                                 <span class="btn btn-success fileinput-button">
-                                                  <!--  <span>Foto de capa</span> -->
+                                                    <!--  <span>Foto de capa</span> -->
                                                     <input type="file" name="capa" id="capa" @change="handleFileUpload" v-validate="'ext:jpeg,jpg,png|size:3500'" accept="image/jpeg, image/png, image/jpg,">
                                                     <span class="alert-danger" v-for="error in errors.collect('capa')" :key="error.index">{{ error }}</span>
                                                     <!-- <input type="file" name="files[]" id="files" multiple accept="image/jpeg, image/png, image/gif,"> -->
@@ -160,7 +167,7 @@
 
 
                                         <div class="modal-footer" style="display: flex; justify-content: space-between;">
-                                           <!-- <button type="reset" class="btn btn-secondary fechar" data-dismiss="modal">Resetar</button> -->
+                                            <!-- <button type="reset" class="btn btn-secondary fechar" data-dismiss="modal">Resetar</button> -->
                                             <button type="submit" class="btn btn-primary entrar">Salvar</button>
                                         </div>
                                     </form>
@@ -186,37 +193,36 @@
 </template>
 
 <script>
-    
     import ax from "../api.js";
     import $ from "jquery"
-    
+
     export default {
         name: "EditarPer",
-        data(){
-            return{
+        data() {
+            return {
                 category: null,
                 nome: null,
                 sobrenome: null,
                 idade: null,
                 altura: null,
-                peso: null,               
+                peso: null,
                 fone: null,
                 //codigo: null,
                 description: null,
-                capa: '',                
+                capa: '',
                 is_working: null,
                 datus: {},
                 old_val: {},
                 per: {},
             }
         },
-        computed:{
-            phone: function(){
+        computed: {
+            phone: function() {
                 return this.fone.replace(/\D/g, '');
             }
         },
-        methods:{
-            getData(){
+        methods: {
+            getData() {
                 ax.get("pf/" + this.$route.params.id + "/mini/").then(response => [
                     (this.per = response.data),
 
@@ -231,10 +237,10 @@
                     this.description = this.per.description,
                     this.capa = this.per.capa,
                     this.is_working = this.per.is_working,
-                    
-                    
+
+
                     /* old val */
-                    
+
                     this.old_val.category = this.per.category,
                     this.old_val.nome = this.per.nome,
                     this.old_val.sobrenome = this.per.sobrenome,
@@ -246,183 +252,181 @@
                     this.old_val.description = this.per.description,
                     this.old_val.capa = this.per.capa,
                     this.old_val.is_working = this.per.is_working,
-                    
-                    
+
+
 
                 ]);
-                
+
             },
-            handleFileUpload(ev){
+            handleFileUpload(ev) {
                 this.capa = ev.target.files[0];
             },
-            
-            addData: function(){
+
+            addData: function() {
                 //console.log(this.datus, this.capa);
-                var formData = new FormData();                
-                if(this.capa != this.old_val.capa){
+                var formData = new FormData();
+                if (this.capa != this.old_val.capa) {
                     //console.log("New foto");
                     formData.append('capa', this.capa);
                     //console.log(formData);
                 }
-                if(!$.isEmptyObject(this.datus)){
+                if (!$.isEmptyObject(this.datus)) {
                     //console.log(this.datus);
                     formData.append('datus', JSON.stringify(this.datus));
                     //console.log(formData);
                 }
-                
-                if(formData.has("capa") || formData.has("datus")){
-                    
+
+                if (formData.has("capa") || formData.has("datus")) {
+
                     ax.put("pf/" + this.$route.params.id + "/", formData, )
-                        .then(response => { 
-                            this.$noty.success( response.data.message)
-                            this.getData()     
+                        .then(response => {
+                            this.$noty.success(response.data.message)
+                            this.getData()
                         })
                         .catch(error => {
                             this.$noty.error(error.response.data.message)
                         })
-                   
-                }else{
+
+                } else {
                     this.$noty.error("Cuidado com as  mudanças, Tente de novo..!");
                 }
-                    
-                   
+
+
             },
         },
-        
-        created (){
+
+        created() {
             this.getData();
             //this.datus={};
             //console.log(this.datus);
-            
+
         },
         watch: {
             category: function(ero1) {
-                
-                if (this.old_val.category != ero1){                   
-                     this.datus.category = ero1;
-                }else{
-                    
-                    delete this.datus.category; 
-                } 
+
+                if (this.old_val.category != ero1) {
+                    this.datus.category = ero1;
+                } else {
+
+                    delete this.datus.category;
+                }
                 //console.log(this.datus);
             },
 
             nome: function(ero2) {
                 if (this.old_val.nome != ero2) {
-                    if(ero2==""){
+                    if (ero2 == "") {
                         delete this.datus.nome;
-                    }else{
+                    } else {
                         this.datus.nome = ero2;
                     }
-                }else{
+                } else {
                     delete this.datus.nome;
-                } 
+                }
                 //console.log(this.datus);
             },
 
             sobrenome: function(ero3) {
                 if (this.old_val.sobrenome != ero3) {
-                    if(ero3==""){
+                    if (ero3 == "") {
                         delete this.datus.sobrenome
-                    }else{
+                    } else {
                         this.datus.sobrenome = ero3;
                     }
-                }else{
+                } else {
                     delete this.datus.sobrenome;
-                }  
+                }
                 //console.log(this.datus);
             },
 
             idade: function(ero4) {
                 if (this.old_val.idade != ero4) {
-                    if(ero4==""){
+                    if (ero4 == "") {
                         delete this.datus.idade;
-                    }else{
+                    } else {
                         this.datus.idade = ero4;
                     }
-                } else{
+                } else {
                     delete this.datus.idade;
                 }
                 //console.log(this.datus);
             },
             altura: function(ero5) {
-                
-                if (this.old_val.altura != ero5){                    
-                    if(ero5==""){
+
+                if (this.old_val.altura != ero5) {
+                    if (ero5 == "") {
                         delete this.datus.altura;
-                    }else{
+                    } else {
                         this.datus.altura = ero5;
                     }
-                }else{
-                    
+                } else {
+
                     delete this.datus.altura;
-                } 
+                }
                 //console.log(this.datus);
             },
 
             peso: function(ero6) {
-                if (this.old_val.peso != ero6){
-                    if(ero6==""){
+                if (this.old_val.peso != ero6) {
+                    if (ero6 == "") {
                         delete this.datus.peso;
-                    }else{
+                    } else {
                         this.datus.peso = ero6;
                     }
-                }else{
+                } else {
                     delete this.datus.peso;
-                } 
+                }
                 //console.log(this.datus);
             },
 
             fone: function(ero7) {
-                if (this.old_val.fone != ero7){
+                if (this.old_val.fone != ero7) {
                     this.datus.phone = this.phone;
-                    
-                }else{
+
+                } else {
                     delete this.datus.phone;
-                }  
+                }
                 //console.log(this.datus);
             },
 
             codigo: function(ero8) {
                 if (this.old_val.codigo != ero8) {
-                    if(ero8==""){
+                    if (ero8 == "") {
                         delete this.datus.codigo;
-                    }else{
+                    } else {
                         this.datus.codigo = ero8;
                     }
-                }else{
+                } else {
                     delete this.datus.codigo;
                 }
                 //console.log(this.datus);
             },
             description: function(ero9) {
                 if (this.old_val.description != ero9) {
-                    if(ero9==""){
+                    if (ero9 == "") {
                         delete this.datus.description;
-                    }else{
+                    } else {
                         this.datus.description = ero9;
                     }
-                }else{
+                } else {
                     delete this.datus.description;
                 }
                 //console.log(this.datus);
             },
             is_working: function(ero10) {
                 //console.log(this.old_val.is_working != ero10);
-                if (this.old_val.is_working != ero10){  
-                    
-                    this.datus.is_working = ero10;  
-                    
-                }else{
-                    
+                if (this.old_val.is_working != ero10) {
+
+                    this.datus.is_working = ero10;
+
+                } else {
+
                     delete this.datus.is_working;
-                    
+
                 }
                 //console.log(this.datus);
             },
         },
-        
+
     }
-    
-    
 </script>
