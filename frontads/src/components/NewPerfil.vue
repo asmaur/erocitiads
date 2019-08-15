@@ -120,7 +120,11 @@
                                         </li>
                                         <li>
                                             Tamanho recomendável de <strong>1600x900px. </strong>
+                                            <br>
+                                        
                                         </li>
+                                        <li>Caso a foto não estiver no tamanho recomendado, ela poderá ficar cortado ou distorcida.</li>
+                                        <li>Poderá também ser removido ou trocada pela nossa equipe.</li>
 
                                     </ul>
 
@@ -129,6 +133,8 @@
                                         <label class="custom-file-label" for="customFile" v-else>Escolha a foto de capa (máximo de 3MB)</label>
                                         <input type="file" class="custom-file-input" ref="capa" v-validate="'ext:jpeg,jpg,png|size:3500|required'" data-vv-as="capa" id="capa" name="capa" @change="handleFileChange" required>
                                         <span v-if="file">{{file.name}}</span>
+                                        <br>
+                                        <span class="alert-warning">Caso a foto não </span>
                                         <br>
                                         <span class="alert-danger" v-for="error in errors.collect('capa')" :key="error.index">{{ error }}</span>
 
@@ -247,7 +253,7 @@
                         //console.log("Cump: "+this.image.width);
 
                         if (this.image.width < MIN_WIDTH) {
-                            alert('A sua imagen: ' + this.image.width + 'x' + this.image.height + 'px é menor que o mínimo recomendado de: ' + MIN_WIDTH + 'x' + MIN_HEIGHT + 'px');
+                            alert('A sua imagen: ' + this.image.width + 'x' + this.image.height + 'px é menor que o mínimo recomendado de: ' + MIN_WIDTH + 'x' + MIN_HEIGHT + 'px.'+ '<br> <strong>A imagem no site poderá ficar cortado ou distorcida</strong>');
                             return;
                         }
                         if (this.image.height < MIN_HEIGHT) {
@@ -262,10 +268,11 @@
             handleFileChange(e) {
                 // Whenever the file changes, emit the 'input' event with the file data.
                 //this.$emit('input', e.target.files[0]);
-
-                this.file = e.target.files[0];
-
-                this.fileSize();
+                
+                //console.log("handle")
+                this.fileSize()
+                
+                this.file = e.target.files[0]
 
             },
 
