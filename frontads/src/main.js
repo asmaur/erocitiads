@@ -36,7 +36,7 @@ import './assets/css/profile.css'
 import './assets/css/galery.css'
 
 
-import 'vuejs-noty/dist/vuejs-noty.css'
+import 'vuejs-noty/dist/vuejs-noty.css';
 
 
 //js custom
@@ -56,11 +56,11 @@ Vue.use(VueNoty, {
 });
 
 
-import VeeValidate from 'vee-validate';
-//import pt_BR from "vee-validate/dist/locale/pt_BR";
-Vue.use(VeeValidate, {locale: 'pt'});
-
-
+import VeeValidate, { Validator } from 'vee-validate';
+import pt_BR from "vee-validate/dist/locale/pt_BR";
+//Vue.use(VeeValidate, {locale: "pt_BR",dictionary: {pt_BR: pt_BR }});
+Validator.localize({ pt_BR: pt_BR });
+Vue.use(VeeValidate, { locale: "pt_BR" });
 
 
 
@@ -79,9 +79,9 @@ NProgress.configure({ minimum: 0.5, easing: 'ease', speed: 5000, showSpinner: tr
 Vue.use(NProgress);
 
 
-import VueTour from 'vue-tour'
-require('vue-tour/dist/vue-tour.css')
-Vue.use(VueTour)
+import VueTour from 'vue-tour';
+require('vue-tour/dist/vue-tour.css');
+Vue.use(VueTour);
 
 
 Vue.config.productionTip = false;

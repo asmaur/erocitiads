@@ -109,7 +109,7 @@
                             <div class="form-row">
                                 <div class="col-md-2">
 
-                                    <img :src="img_url+per.capa" class="img-fluid" alt="">
+                                    <img :src="per.capa" class="img-fluid" alt="">
 
                                     <span class="btn btn-success fileinput-button">
 

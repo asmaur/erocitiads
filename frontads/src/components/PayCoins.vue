@@ -8,12 +8,12 @@
 
         <div class="card-body">
             <ul class="text-left">
-                <li>Compra mínima de <strong>R$59.90</strong> </li>
+                <li>Compra mínima de <strong>R$20.90</strong> </li>
                <!-- <li>Na janela do Pagseguro, <strong>Favor usar o email da sua conta.</strong> </li> -->
                 
             </ul>
             <div class="input-group">
-                <input type="number" v-validate="{decimal:4, min_value:59.90, required:true}" min="59.90" step="10.0" class="form-control" name="coin" v-model="coin" aria-label="Amount (to the nearest dollar)" required>
+                <input type="number" v-validate="{decimal:4, min_value:20.90, required:true}" min="20.90" step="10.0" class="form-control" name="coin" v-model="coin" aria-label="" required>
                 <div class="input-group-append">
                     <span class="input-group-text">R$</span>
                 </div>

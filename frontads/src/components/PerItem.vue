@@ -1,7 +1,7 @@
 <template>
     <router-link :to="'/profile/'+item.slug+'/'+item.pk+'/'" class="col-md-4">
         <div class="boads-item">
-            <img class="img-fluid" :src="img_url+item.capa" alt>
+            <img class="img-fluid" :src="item.capa" alt>
             <div class="boards-overlay">
                 <h2>{{item.nome}} {{item.sobrenome}}</h2>
 
