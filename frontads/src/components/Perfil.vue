@@ -13,9 +13,9 @@
         <div id="dash">
             <nav>
                 <div class="nav nav-tabs justify-content-center nav-fill" id="nav-tab" role="tablist">
-                    <a class="nav-item nav-link active" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="true">Perfil</a>
-                    <a class="nav-item nav-link" id="nav-planos-tab" data-toggle="tab" href="#nav-planos" role="tab" aria-controls="nav-planos" aria-selected="false">Planos</a>
-                    <a class="nav-item nav-link" id="nav-stats-tab" data-toggle="tab" href="#nav-stats" role="tab" aria-controls="nav-stats" aria-selected="false">Statistik</a>
+                    <a class="nav-item nav-link active v-step-5" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="true">seu Anúncio</a>
+                    <a class="nav-item nav-link v-step-6" id="nav-planos-tab" data-toggle="tab" href="#nav-planos" role="tab" aria-controls="nav-planos" aria-selected="false">Planos</a>
+                    <a class="nav-item nav-link v-step-7" id="nav-stats-tab" data-toggle="tab" href="#nav-stats" role="tab" aria-controls="nav-stats" aria-selected="false">Statistik</a>
                 </div>
             </nav>
 
@@ -115,6 +115,9 @@
             
             
         </div>
+        
+               
+        
     </div>
 </template>
 
@@ -152,7 +155,7 @@
                 pf: null,
                 serv: {},
                 agente: {},
-            };
+            }
         },
         components: {
             VuePerfil,

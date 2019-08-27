@@ -1,6 +1,6 @@
 <template>
     <div class="card">
-        <div class="card-header" id="headingThree">
+        <div class="card-header v-step-" id="headingThree">
             <h5 class="mb-0">
                 <button class="btn btn-link btn-block collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="color:#000; font-weight: 600; font-size: 1.2rem;">Valores do anúncio</button>
             </h5>

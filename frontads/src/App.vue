@@ -1,39 +1,33 @@
 <template>
     <div id="app">
+        
 
         <router-view :key="$route.fullPath" />
 
-
+       <dash-tour />
+       
         <Footer />
+        
+        
+        
+        
+        
     </div>
 </template>
 
 
 <script>
     import Footer from '@/components/Footer.vue'
+    import DashTour from '@/components/DashTour.vue'
+    
     export default {
         name: "App",
         components: {
             Footer,
+            DashTour,
+            
         },
 
-        mounted() {
-            const dict = {
-                custom: {
-                    email: {
-                        required: 'O campo email é obrigatório.'
-                    },
-                    name: {
-                        required: () => 'O Campo nome de usuario é obrigatório'
-                    },
-                    file: {
-                        required: () => 'Selecione um arquivo de imagem',
-                        
-                    }
-                }
-            };
-            this.$validator.localize("pt-br", dict)
-        },
 
 
     }

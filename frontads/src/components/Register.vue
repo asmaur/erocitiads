@@ -52,6 +52,7 @@
                                     <label for="password">Senha</label>
                                     <input type="password" class="form-control" id="password" v-model="password" v-validate="{alpha_num: true, required: true}" name="password" ref="password" placeholder="Entre sua senha(no minimo um número)" title="Deve conter no minimo um número" pattern="(?=.*\d)(?=.*[a-zA-Z]).{8,}">
                                     <span class="alert-danger" v-for="error in errors.collect('password')" :key="error.index">{{ error }}</span>
+                                    
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="confirm_password">Confirmar Senha</label>

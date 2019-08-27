@@ -3,7 +3,7 @@
     <div>
 
         <div class="card">
-            <div class="card-header" id="headingOne">
+            <div class="card-header v-step-" id="headingOne">
                 <h5 class="mb-0">
                     <button class="btn btn-link btn-block" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color:#000; font-weight: 600; font-size: 1.2rem;">Dados do anúncio</button>
                 </h5>

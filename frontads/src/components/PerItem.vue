@@ -1,5 +1,5 @@
 <template>
-    <router-link :to="'/profile/'+item.slug+'/'+item.pk+'/'" class="col-md-4">
+    <router-link :to="'/profile/'+item.slug+'/'+item.pk+'/'" class="col-md-4 v-step-5">
         <div class="boads-item">
             <img class="img-fluid" :src="item.capa" alt>
             <div class="boards-overlay">

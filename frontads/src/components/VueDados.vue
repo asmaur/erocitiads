@@ -1,7 +1,7 @@
 <template>
     <div class="card">
-        <div class="card-header" id="headingOne">
-            <h5 class="mb-0">
+        <div class="card-header v-step-" id="headingOne">
+            <h5 class="mb-0 ">
                 <button class="btn btn-link btn-block" type="button" data-toggle="collapse" data-target="#collapseD" aria-expanded="true" aria-controls="collapseD" style="color:#000; font-weight: 600; font-size: 1.2rem;">Detalhes do anúncio</button>
             </h5>
         </div>

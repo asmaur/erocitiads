@@ -3,8 +3,8 @@
     <div>
         <nav class="navbar navbar-expand-lg wiz-dash-nav">
 
-            <router-link class="navbar-brand" :to="'/dash/'+agente.id+'/'">
-                <i class="fas fa-home fa-x"></i> INÍCIO
+            <router-link class="navbar-brand v-step-0" :to="'/dash/'+agente.id+'/'">
+                <i class="fas fa-home fa-x "></i> INÍCIO
                 <!-- EroCiti ads -->
             </router-link>
             <button class="navbar-toggler wiz-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,14 +13,14 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item" style="margin: 0 1px 1.2px 0;">
+                    <li class="nav-item v-step-1" style="margin: 0 1px 1.2px 0;">
                         <a class="nav-link btn btn-outline-warning" data-toggle="modal" data-target="#criar-perfil">
                             <i class="fa fa-plus"></i> ANÚNCIO
                             <!--perfil -->
                         </a>
                     </li>
 
-                    <li class="nav-item dropdown" style="margin: 0 1px 1.2px 0;">
+                    <li class="nav-item dropdown v-step-2" style="margin: 0 1px 1.2px 0;">
                         <a class="nav-link btn btn-outline-warning dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{user.username}}</a>
                         <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="navbarDropdown">
 
@@ -34,7 +34,7 @@
                             <button class="dropdown-item btn" href="#" @click="logout">Sair</button>
                         </div>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item v-step-3">
                         <a class="nav-link btn btn-outline-warning" href="https://erociti.com" target="_blank">VER DIVAS</a>
                     </li>
 
@@ -43,6 +43,14 @@
         </nav>
 
         <NewPerfil :pk="agente.id" />
+        
+        
+        
+        
+        
+                
+        
+        
     </div>
 </template>
 
@@ -51,6 +59,7 @@
     //import { mapState, mapActions } from 'vuex'
 
     import NewPerfil from "@/components/NewPerfil.vue";
+    //import DashTour from '@/components/DashTour.vue'
 
     export default {
         name: "DashNav",
@@ -60,13 +69,18 @@
                 //pk: null,
                 user: {},
                 agente: {},
+
+
+              
+
             }
         },
         computed: {
 
         },
         components: {
-            NewPerfil
+            NewPerfil,
+            
         },
         methods: {
 

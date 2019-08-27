@@ -1,6 +1,6 @@
 <template>
     <div class="card">
-        <div class="card-header" id="headingFive">
+        <div class="card-header v-step-" id="headingFive">
             <h5 class="mb-0">
                 <button class="btn btn-link btn-block collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" style="color:#000; font-weight: 600; font-size: 1.2rem;">Fotos do anúncio</button>
             </h5>

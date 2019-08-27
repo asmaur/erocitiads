@@ -16,7 +16,7 @@
 
         </div>
 
-        <div id="dash">
+        <div id="dash" class="v-step-4">
 
             <div class="container">
 
