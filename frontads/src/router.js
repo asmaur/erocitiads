@@ -16,7 +16,8 @@ var isAuthenticated = function(){
 }
 
 let router =  new Router({
-    //mode: 'history',
+    mode: 'history',
+    
   routes: [
     {
       path: '/',

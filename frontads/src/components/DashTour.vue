@@ -25,7 +25,8 @@
 
 
                 },
-                steps: [{
+                steps: [
+                    /*{
                         target: '.v-step-0', // We're using document.querySelector() under the hood
                         content: `Bem-vinda a sua página inicial <br> <strong>Aqui você volta ao painel de controle!`,
                         params: {
@@ -62,7 +63,7 @@
                         content: `<strong>Veja as estatística de clics e views</strong> no seu anúncio!`,
                     },
                         
-                  /*  {
+                    {
                         target: '.v-step-6',
                         content: `Aqui, veja e edite todos os<strong> dados do seu anúncio</strong>!`,
                     },
@@ -98,10 +99,10 @@
                 ]
             }
         },
-        mounted() {
+       /* mounted() {
             setTimeout(() => {
-                this.$tours['DashTour'].start()
+                //this.$tours['DashTour'].start()
             }, 1500)
-        }
+        }*/
     }
 </script>

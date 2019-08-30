@@ -4,7 +4,7 @@
 
         <router-view :key="$route.fullPath" />
 
-       <dash-tour />
+      <!-- <dash-tour /> -->
        
         <Footer />
         
@@ -18,13 +18,13 @@
 
 <script>
     import Footer from '@/components/Footer.vue'
-    import DashTour from '@/components/DashTour.vue'
+    //import DashTour from '@/components/DashTour.vue'
     
     export default {
         name: "App",
         components: {
             Footer,
-            DashTour,
+            //DashTour,
             
         },
 
