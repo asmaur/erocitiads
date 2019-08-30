@@ -24,6 +24,7 @@ module.exports = {
             .public('http://0.0.0.0:8080')
             .host('0.0.0.0')
             .port(8080)
+            .historyApiFallback(true)
             .hotOnly(true)
             .watchOptions({poll: 1000})
             .https(false)
