@@ -84,6 +84,7 @@
                 valide: null,
                 password: null,
                 confirm_password: null,
+                
             }
         },
         methods:{
@@ -116,9 +117,9 @@
         created() {
             ax.post("log/check_code/",{"code": this.$route.params.reset})
             .then(response =>{
-                console.log(response.data)
+                //console.log(response.data)
                 this.valide = response.data.success;
-                console.log(this.valide)
+                //console.log(this.valide)
             })
             .catch(error =>{
                 this.valide = error.response.data.success;

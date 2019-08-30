@@ -8,12 +8,13 @@
 </template>
 
 
+
 <script>
     import VueResetar from "@/components/VueResetar.vue";
     import NoNav from '@/components/NoNav.vue'
 
     export default {
-        name: "Esqueci",
+        name: "Resetar",
         components: {
             VueResetar,
             NoNav,
