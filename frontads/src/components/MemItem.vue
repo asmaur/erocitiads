@@ -18,8 +18,8 @@
             </div>
 
             <div class="card-footer">
-                <!--  <router-link :to="'/pay/'+slug+'/'+pk+'/'+plano.id+'/'" class="btn btn-primary btn-block ativar" disabled="PlanStatus" >ATIVAR</router-link> -->
-                <button class="btn btn-primary btn-block ativar" @click="setPlano">ATIVAR </button>
+                <!--  <router-link :to="'/pay/'+slug+'/'+pk+'/'+plano.id+'/'" class="btn btn-primary btn-block ativar" disabled="PlanStatus" >PUBLICAR</router-link> -->
+                <button class="btn btn-primary btn-block ativar" @click="setPlano">PUBLICAR </button>
                 <!--  <a href="plano.html" class="btn btn-primary btn-block disabled">Aprovado</a> -->
 
             </div>

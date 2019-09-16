@@ -15,8 +15,8 @@
             </div>
 
             <div class="card-footer">
-                <button class="btn btn-primary btn-block ativar" @click="renovarPlano" :disabled="plano.membership.unpaid">Renovar </button>
-                <button class="btn btn-primary btn-block disabled">Ativo</button>
+                <button class="btn btn-primary btn-block ativar" @click="renovarPlano" :disabled="plano.membership.unpaid">RENOVAR </button>
+                <button class="btn btn-primary btn-block disabled">PUBLICADO</button>
             </div>
         </div>
     </div>
