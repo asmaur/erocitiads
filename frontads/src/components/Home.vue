@@ -41,15 +41,15 @@
                 <div class="col-sm-12 col-md-8 offset-md-2 text-center" style="font-size: 1.5rem;">
 
                     <p style="padding: 2rem;">
-                        Somos um site de maketing e publicidade que vai ajudar você a alavancar seu negócio. <br>
-
+                        Somos um site de publicidade e maketing pessoal.
                         EroCiti é uma plataforma completa, ideal para quem trabalha no mercado do entretenimento adulto.
                         <br>
 
                     </p>
-                    <p>
-                        Mude a forma de se relacionar com seus clientes.
-                    </p>
+                    <div class="alert alert-danger" role="alert" style="font-weight: 600;">
+                        <p style="text-transform: uppercase;"> Não somos uma agencia.</p>
+                        <p> <small> **Não agenciamos as divas, modelos e acompanhantes que se cadastaram no nosso site.</small> </p>
+                    </div>
 
                 </div>
                 </div>
@@ -180,7 +180,7 @@
         </div>
 
 
-        <div id="divas">
+      <!--  <div id="divas">
 
             <div class="container">
                 <div class="row">
@@ -227,7 +227,7 @@
                 </div>
             </div>
 
-        </div>
+        </div> 
 
         <div id="newsletter" class="d-flex align-items-center justify-content-center">
             <div class="container">
@@ -242,7 +242,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!--
 

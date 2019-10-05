@@ -362,7 +362,7 @@ OWL Carasoul
 .footer-navbar{
     position: relative;
     margin-top: 50vh;
-    float: right;
+    //float: right;
 }
 #footer ul{
     padding: 0;

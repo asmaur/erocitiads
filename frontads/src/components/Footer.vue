@@ -34,15 +34,28 @@
         </div>
         <div id="footer">
             <div class="container">
+               <div class="row">
+               
+               <div class="col-sm-12 text-center">
                 <ul class="footer-navbar">
 
                     <li> <router-link to="/politica-de-privacidade"> Política de privacidade </router-link> </li>
                     <li> <router-link to="/termo-de-uso" >Termo &amp; Condições de Uso</router-link> </li>
                     <li> <a href="https://erociti.com" target="_blank">Ir Para erociti.com</a> </li>
                 </ul>
-                <div class="copy-text">
-                    EroCiti Group. &copy; {{ano}} | Todos os direitos reservados. </div>
+    </div>
+                <div class="col-sm-12 col-md-6 text-left p-3 copy-text">
+                    EroCiti Group. &copy; {{ano}} | Todos os direitos reservados. 
+                </div>
+                <div class="col-sm-12 col-md-6 p-3 text-right">
+                    <a href="https://wanubit.com" target="_blank">
+                    <span> Design by </span>
+                        <img src="../assets/imagen/wanu.png" class="fluid-img" style="height: 20px; width: 20px; margin-left: 1rem;"> Wanubit
+                    </a>
+                </div>
+                
             </div>
+    </div>
         </div>
 
     </div>

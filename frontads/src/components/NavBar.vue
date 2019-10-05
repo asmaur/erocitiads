@@ -37,10 +37,10 @@
                     <a class="nav-link page-scroll" href="#services">Serviços</a>
                 </li>
 
-                <li class="nav-item">
+             <!--   <li class="nav-item">
                     <a class="nav-link page-scroll" href="#divas">Divas</a>
                 </li>
-             <!--   <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link page-scroll" href="#clients">Clientes</a>
                 </li>
                 <li class="nav-item">
